@@ -3,7 +3,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Grey+Qo&family=Montserrat:wght@300&display=swap");
 /* SASS Color Variables */
 /*============
-NAVBAR STYLES 
+  NAVBAR STYLES 
 ==============*/
 #navbar {
   position: fixed;
@@ -51,7 +51,7 @@ NAVBAR STYLES
 }
 
 /*============
-GENERAL BODY STYLES 
+  GENERAL BODY STYLES 
 ==============*/
 body {
   background-color: #5a0000;
@@ -73,7 +73,7 @@ p {
 }
 
 /*============
-WELCOME STYLES 
+  WELCOME STYLES 
 ==============*/
 #welcome-section {
   /* fill the screen */
@@ -110,17 +110,90 @@ WELCOME STYLES
 }
 
 /*============
-PROJECTS STYLES 
+  PROJECTS STYLES 
 ==============*/
+#projects h4 {
+  text-indent: 2%;
+  background-image: radial-gradient(circle, rebeccapurple, rgba(100, 50, 180, 0.5), rgba(40, 0, 50, 0.5));
+  margin: 0px 10%;
+  border-radius: 2px;
+  box-shadow: 1px 1px 10px darkslateblue;
+  padding: 10px 0px;
+}
+
+.projects-overflow {
+  white-space: nowrap;
+  position: relative;
+  height: 540px;
+  width: 90%;
+  margin: 20px auto;
+  padding: 50px;
+  border: 4px rgba(100, 50, 180, 0.5) solid;
+  border-radius: 3px;
+  overflow-x: scroll;
+  overflow-y: hidden;
+}
+.projects-overflow .project-block {
+  float: none;
+  display: inline-block;
+}
+
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+  padding: 30px 2px;
+}
+
+.project-block {
+  height: 450px;
+  width: 550px;
+  background-color: rgba(40, 0, 50, 0.5);
+  border: 3px solid rgba(100, 50, 180, 0.5);
+  border-radius: 3px;
+  margin: auto;
+}
+.project-block div {
+  padding: 3px;
+  text-align: center;
+}
+
+.project-image {
+  height: 300px;
+  width: 540px;
+  margin: 3px;
+  border: 2px solid rgba(100, 50, 180, 0.5);
+  border-radius: 3px;
+}
+
+.project-title {
+  font-size: 30px;
+}
+
+.project-github-link {
+  font-size: 35px;
+}
+
+.project-tv-link {
+  font-size: 30px;
+}
+
 /*============
-EDUCATION STYLES 
+  EDUCATION STYLES 
 ==============*/
-#education > h4 {
+#education h4 {
   text-indent: 2%;
   background-image: radial-gradient(circle, rebeccapurple, #640037, rgba(50, 0, 40, 0.967));
   margin: 0px 10%;
   border-radius: 2px;
   box-shadow: 1px 1px 10px darkslateblue;
+}
+#education li {
+  list-style-type: square;
+}
+#education p {
+  padding: 10px 5px;
 }
 
 .education-entry {
@@ -195,6 +268,7 @@ EDUCATION STYLES
   color: #fac8fa;
   font-size: 15px;
   padding: 6px;
+  margin-right: 10px;
   border: 1px solid indigo;
   transition: border 0.4s ease-in;
 }
@@ -211,38 +285,55 @@ EDUCATION STYLES
   height: 30px;
   width: 70px;
   margin-right: 10px;
-  color: magenta;
   cursor: pointer;
-  transition: color 0.3s linear;
 }
 
-.education-links {
+#education-img {
+  background-color: rgba(100, 0, 100, 0.2);
+  filter: blur(20px);
+  position: absolute;
+  z-index: -1;
+  height: 2500px;
+  width: 100%;
+}
+
+/*============
+  ICON LINK STYLES 
+==============*/
+.project-link-icon {
+  color: rgba(100, 100, 200, 0.7);
+  transition: 0.3s linear;
+}
+
+.project-link-icon:hover {
+  color: #503264;
+  transition: 0.3s linear;
+}
+
+#translate-course, .education-links {
   color: magenta;
   transition: color 0.3s linear;
 }
 
 #translate-course:hover, .education-links:hover {
   color: purple;
-  transition: 0.3 linear;
+  transition: color 0.3 linear;
 }
 
-/*
-#education-img {
-  background-color: rgba(100, 0, 100, 0.2);
-  filter: blur(50px);
-  position: absolute;
-  z-index: -1;
-  height: 1700px;
-  width: 100%;
-}*/
 /*============
-FOOTER STYLES 
+  FOOTER STYLES 
 ==============*/
 footer {
   height: 500px;
 }
 footer p {
   text-align: center;
+}
+footer hr {
+  color: #fac8fa;
+  border-top: 5px magenta solid;
+  border-bottom: 5px indigo solid;
+  filter: blur(2px);
 }
 
 #contact-links {
@@ -264,48 +355,63 @@ footer p {
   transform: translateY(-3px);
 }
 
+/*======================
+  SVG LINK STYLES 
+========================*/
 #replit-logo {
-  height: 50px;
-  transform: translateY(-7px);
+  width: 60px;
+  height: 60px;
+  transform: translateY(-4px);
+}
+#replit-logo .cls-2, #replit-logo .cls-3 {
+  fill: #fac8fa;
+  transition: 0.3s;
+}
+#replit-logo:hover .cls-2, #replit-logo:hover .cls-3 {
+  fill: rgba(50, 0, 40, 0.967);
+  transition: 0.3s;
 }
 
 #codepen-logo {
-  height: 50px;
-  transform: translateY(-6px);
+  width: 53px;
+  height: 53px;
+  transform: translateY(-2px);
+}
+#codepen-logo .outer-ring, #codepen-logo .inner-box {
+  fill: #fac8fa;
+  transition: 0.3s;
+}
+#codepen-logo:hover .outer-ring, #codepen-logo:hover .inner-box {
+  fill: rgba(50, 0, 40, 0.967);
+  transition: 0.3s;
 }
 
-#codepen-link:link, #codepen-link:visited {
+/*******************
+  Old technique to create hover effect for CodePen.io and Replit svg files: using filters for replit and codepen svg files generated partially by using 
+  Barret Sonntag's CSS filter generator found at 
+  https://codepen.io/sosuke/pen/Pjoqqp
+
+.codepen-link:link, .codepen-link:visited {
   filter: invert(85%) sepia(100%) saturate(3000%) hue-rotate(281deg) brightness(90%) contrast(96%);
 }
 
-#replit-link:link, #replit-link:visited {
+.replit-link:link, .replit-link:visited {
   filter: invert(60%) sepia(100%) saturate(1500%) hue-rotate(281deg) brightness(200%) contrast(96%);
 }
 
-#codepen-link:hover, #codepen-link:active {
+.codepen-link:hover, .codepen-link:active {
   filter: brightness(15%);
-  transition: 1s;
+  transition : 1s;
 }
 
-#replit-link:hover, #replit-link:active {
+.replit-link:hover, #replit-link:active {
   filter: brightness(5%);
-  transition: 1s;
+  transition : 1s;
 }
 
-/* 
-  Filters for replit and codepen svg files generated partially by using 
-  Barret Sonntag's CSS filter generator found at 
-  https://codepen.io/sosuke/pen/Pjoqqp
-*/
-footer > hr {
-  color: #fac8fa;
-  border-top: 5px magenta solid;
-  border-bottom: 5px indigo solid;
-  filter: blur(2px);
-}
-
+************/
 /*============
-RESPONSIVE STYLES 
+  RESPONSIVE STYLES 
 ==============*/
 @media (max-width: 890px) {
   .dates {

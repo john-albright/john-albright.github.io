@@ -19,7 +19,13 @@ const linkEsp = "https://www.edx.org/professional-certificate/uc3mx-introduccion
 // jQuery functions to be applied once the document is loaded
 $(document).ready(function() {
   
-  // Add a custom function toggleHTML()
+  /**
+   * Add a custom function toggleHTML()
+   * 
+   * Idea for function below taken from JxAxMxIxN's response 
+   * to the StackOverflow discussion at the link:    
+   * https://stackoverflow.com/questions/2155453/jquery-toggle-text 
+   */ 
   $.fn.extend({
     toggleHTML: function(a, b) {
       if (this.html().includes(a)) {
@@ -33,12 +39,6 @@ $(document).ready(function() {
       }
     }
   });
-  /**
-   * Idea for function above taken from JxAxMxIxN's response 
-   * to the StackOverflow discussion at the link:    
-   * https://stackoverflow.com/questions/2155453/jquery-toggle-text 
-   */ 
-  
   
   // Add some Bootstrap classes
   $(".expand-all-btn").addClass("float-right");
@@ -76,7 +76,7 @@ $(document).ready(function() {
     // console.log(otherDetailsDiv.html());
     
     // Get the 1st-3rd Spanish words in the other-details div
-    var otherDetailsChildren = otherDetailsDiv.children(".java-info-to-fade");
+    var otherDetailsChildren = otherDetailsDiv.find(".java-info-to-fade");
     var otherDetailsFirst = otherDetailsChildren.first();
     var otherDetailsSecond = otherDetailsChildren.slice(1, 2);
     var otherDetailsThird = otherDetailsChildren.slice(2);
@@ -105,5 +105,31 @@ $(document).ready(function() {
       
     });
   }
+
+  /**************
+  Old code for transitioning colors with svg symbols
+  I couldn't get the colors to transition properly. 
+    
+  var replitClasses = $("#replit-logo").find(".cls-3, .cls-2");
+  var codePenClasses = $("#codepen-logo").find(".inner-box, .outer-ring");
+  var lightPink = replitClasses.css("fill");
+  var purpleRed = "rgba(50, 0, 40, 0.967)";
   
-});
+  // Create hover effect for Replit svg
+  /*$(".replit-logo-footer").hover(
+    function() {
+      replitClasses.animate({"fill": purpleRed}, 1000);
+    }, function() {
+      replitClasses.animate({"fill": lightPink}, 1000);
+  });
+  
+  // Create hover effect for CodePen svg
+  $(".codepen-logo-footer").hover(
+    function() {
+      codePenClasses.css({"fill": purpleRed});
+  }, function() {
+      codePenClasses.css({"fill": lightPink});
+  }); 
+  ********/
+  
+}); // end of jQuery document.ready() function
