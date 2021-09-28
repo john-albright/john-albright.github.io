@@ -60,6 +60,19 @@ $(document).ready(function() {
     $(this).toggleClass("rotate-expander");
   }
   
+  // Call function on load
+  changeProjectImageHeight();
+  
+  // Call function every time the div projects is resized
+  $(window).on("resize", changeProjectImageHeight);
+  
+  // Change the height of the img in the projects section to match the size of the div
+  function changeProjectImageHeight() {
+    var height = $("#projects").css("height");
+    console.log(height);
+    $("project-background-image").css("height", height);
+  }
+
   // Translate the text in the div of the Spanish course to English
   $("#translate-course").on("click", translateCourse);
   

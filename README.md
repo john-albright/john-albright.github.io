@@ -1,5 +1,5 @@
-# Portfolio Website
+# Programmer Portfolio Website
 
 This is the source code for my portfolio website. To view the live website, visit my [GitHub user site](https://john-albright.github.io/).The index page can also be viewed on [CodePen](https://codepen.io/john-albright/full/mdwxzyw).
 
-The index page was created for the 5th project of FreeCodeCamp's first certificate [Responsive Web Design](https://www.freecodecamp.org/learn/responsive-web-design). Later, more pages were added to fulfill the requirements for [problem set 8](https://cs50.harvard.edu/x/2021/psets/8/) of Harvard's [CS50 Introduction to Programming](https://online-learning.harvard.edu/course/cs50-introduction-computer-science?delta=0). The code was made from scratch using HTML, SCSS, JavaScript, jQuery, and Bootstrap. However, it was inspired by a FreeCodeCamp model/project titled [FCC: Personal Portflio](https://codepen.io/freeCodeCamp/pen/zNBOYG). 
+The index page was created for the 5th project of FreeCodeCamp's first certificate [Responsive Web Design](https://www.freecodecamp.org/learn/responsive-web-design). Later, more pages were added to fulfill the requirements for [problem set 8](https://cs50.harvard.edu/x/2021/psets/8/homepage) of Harvard's [CS50 Introduction to Programming](https://online-learning.harvard.edu/course/cs50-introduction-computer-science?delta=0). The code was made from scratch using HTML, SCSS, JavaScript, jQuery, and Bootstrap. However, it was inspired by a FreeCodeCamp model/project titled [FCC: Personal Portflio](https://codepen.io/freeCodeCamp/pen/zNBOYG). 
