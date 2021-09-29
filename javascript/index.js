@@ -69,8 +69,8 @@ $(document).ready(function() {
   // Change the height of the img in the projects section to match the size of the div
   function changeProjectImageHeight() {
     var height = $("#projects").css("height");
-    console.log(height);
-    $("project-background-image").css("height", height);
+    //console.log(height);
+    $("#project-background-image").css("height", height);
   }
 
   // Translate the text in the div of the Spanish course to English
