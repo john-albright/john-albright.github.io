@@ -175,6 +175,14 @@ p {
   width: 100%;
 }
 
+#c-sharp-project {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  vertical-align: top;
+  margin-top: 7px;
+}
+
 /*============
   EDUCATION STYLES 
 ==============*/
