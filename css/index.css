@@ -7,34 +7,81 @@
 ==============*/
 #navbar {
   position: fixed;
+  display: grid;
+  grid-template-columns: 1fr 70px;
+  align-items: center;
   width: 100%;
   height: 65px;
   z-index: 1;
   background-color: rgba(50, 0, 40, 0.967);
-  font-size: 20px;
-  font-weight: 1000;
-  /* LIST ITEMS */
+  font-size: 22px;
+  font-weight: 900;
 }
 #navbar ul {
-  padding-top: 5px;
-  width: 100%;
+  padding: 0px 10px;
+  margin: 0px;
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  align-items: center;
 }
-#navbar ul > li {
-  list-style-type: none;
-  padding: 10px;
-  /* LINK FORMATTING */
-}
-#navbar ul > li a {
-  padding: 10px;
+#navbar ul a {
   text-decoration: none;
 }
-#navbar ul > li a:link, #navbar ul > li a:visited {
+#navbar ul a:link, #navbar ul a:visited {
   color: #c800fa;
 }
-#navbar ul > li a:hover, #navbar ul > li a:active {
+#navbar ul a:hover, #navbar ul a:active {
   color: #fac8fa;
   background-color: #640037;
   transition: color 0.3s ease-in, background-color 0.3s linear;
+}
+#navbar ul li {
+  list-style-type: none;
+  height: 50px;
+  line-height: 30px;
+  padding: 10px;
+  text-align: center;
+}
+
+/*============
+  SUB-NAVBAR STYLES 
+==============*/
+#sub-navbar {
+  position: fixed;
+  display: none;
+  grid-template-columns: 1fr;
+  align-items: center;
+  margin-top: 65px;
+  height: 65px;
+  width: 100%;
+  z-index: 1;
+  background-color: rgba(50, 50, 130, 0.967);
+  font-size: 22px;
+  font-weight: 900;
+}
+#sub-navbar ul {
+  height: 65px;
+  display: grid;
+  padding: 0px 10px;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-column-gap: 10px;
+  align-items: center;
+}
+#sub-navbar ul li {
+  list-style-type: none;
+  text-align: center;
+  padding: 5px 0px;
+}
+#sub-navbar ul a {
+  text-decoration: none;
+}
+#sub-navbar ul a:link, #sub-navbar ul a:visited {
+  color: #fac8fa;
+}
+#sub-navbar ul a:hover, #sub-navbar ul a:active {
+  background-color: rgba(100, 100, 200, 0.7);
+  transition: 0.3s linear;
 }
 
 /*============
@@ -63,11 +110,9 @@ p {
   WELCOME STYLES 
 ==============*/
 #welcome-section {
-  /* fill the screen */
   height: 100vh;
   width: 100%;
   background-color: rgba(100, 0, 100, 0.2);
-  /* center text vertically in div */
   display: flex;
   justify-content: center;
   align-content: center;
@@ -215,10 +260,10 @@ p {
   display: grid;
   grid-template-columns: 1fr 20px;
   align-items: center;
-  border: 1px solid indigo;
+  font-size: 20px;
   padding: 10px;
   background-color: rgba(50, 0, 40, 0.967);
-  font-size: 20px;
+  border: 1px solid indigo;
 }
 
 #degree-to-translate {
@@ -231,9 +276,9 @@ p {
 }
 
 .school {
-  padding: 10px;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  padding: 10px;
 }
 
 .dates {
@@ -243,27 +288,6 @@ p {
 .other-details {
   padding: 10px;
   display: none;
-}
-
-.div-expander {
-  height: 45px;
-  font-size: 30px;
-  align-items: center;
-  font-weight: bold;
-  cursor: pointer;
-  color: magenta;
-  transform: rotate(0deg);
-  transition: transform 0.3s, color 0.3s linear;
-}
-
-.div-expander:hover {
-  color: #640037;
-  transition: 0.3s linear;
-}
-
-.rotate-expander {
-  transform: rotate(-45deg);
-  transition: 0.3s;
 }
 
 .expand-all-btn {
@@ -290,6 +314,38 @@ p {
   width: 70px;
   margin-right: 10px;
   cursor: pointer;
+}
+
+/*============
+  DIV EXPANDER STYLES 
+==============*/
+#navbar-submenu-expander {
+  width: 25px;
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  margin-left: 20px;
+  cursor: pointer;
+  color: magenta;
+  transition: transform 0.3s, color 0.3s linear;
+}
+
+.div-expander {
+  height: 45px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  color: magenta;
+  transition: 0.3s linear;
+}
+
+.div-expander:hover, #navbar-submenu-expander:hover {
+  color: #640037;
+  transition: 0.3s linear;
+}
+
+.rotate-expander {
+  transform: rotate(-45deg);
 }
 
 /*============
@@ -351,6 +407,23 @@ footer hr {
 }
 
 /*======================
+  SCROLL BAR STYLES 
+========================*/
+.projects-overflow::-webkit-scrollbar {
+  height: 0.5em;
+}
+
+.projects-overflow::-webkit-scrollbar-track {
+  background: #704785;
+  border-radius: 100vw;
+}
+
+.projects-overflow::-webkit-scrollbar-thumb {
+  background: #610552;
+  border-radius: 100vw;
+}
+
+/*======================
   SVG LINK STYLES 
 ========================*/
 #replit-logo {
@@ -408,7 +481,7 @@ footer hr {
 /*============
   RESPONSIVE STYLES 
 ==============*/
-@media (max-width: 890px) {
+@media screen and (max-width: 890px) {
   .dates {
     justify-self: start;
   }

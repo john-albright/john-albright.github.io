@@ -25,12 +25,19 @@
     <header>
     <!-- start NAVBAR -->
     <nav id="navbar">
-        <ul class="d-flex flex-row">
-        <li><a href="#welcome-section">Welcome</a></li>
-        <li><a href="#projects">Projects</a></li>
-        <li><a href="#education">Education</a></li>
-        <li><a href="#contact">Contact</a></li>
-        <li>
+        <ul>
+            <a href="#welcome-section"><li>Welcome</li></a>
+            <a href="#projects"><li>Projects</li></a>
+            <a href="#education"><li>Education</li></a>
+            <a href="#contact"><li>Contact</li></a>
+        </ul>
+        <span id="navbar-submenu-expander">&#43;</span>
+    </nav>
+    <nav id="sub-navbar">
+        <ul>
+            <a href="pages/experience"><li>Experience</li></a>
+            <a href="pages/all-projects"><li>All Projects</li></a>
+            <a href="pages/photography"><li>Photography</li></a>
         </ul>
     </nav>
     <!-- end NAVBAR -->
@@ -92,9 +99,9 @@
                 <div class="project-title">Stocks Investing Application</div>
                 <div class="project-description">Flask, JavaScript, SQL</div>
                 <div class="project-link">
-                    <a href="https://github.com/john-albright/timestamp-microservice-free-code-camp" target="_blank" title="Timestamp Microservice GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github contact-links"></i></a>
+                    <a href="https://github.com/john-albright/stocks-application-cs50-finance" target="_blank" title="Stocks Investing Application GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github contact-links"></i></a>
                     &nbsp;
-                    <a href="https://replit.com/@john-albright/timestamp-microservice-free-code-camp" title="Timestamp Microservice Replit Project Live Link" target="_blank"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
+                    <a href="https://replit.com/@john-albright/stocks-application-cs50-finance" title="Stocks Investing Application Replit Live Link" target="_blank"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="project-block">
@@ -104,7 +111,7 @@
                 <div class="project-link">
                     <a href="https://github.com/john-albright/exercise-tracker-free-code-camp" target="_blank" title="Exercise Tracker GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github contact-links"></i></a>
                     &nbsp;
-                    <a href="https://replit.com/@john-albright/exercise-tracker-free-code-camp" title="Exercise Tracker Replit Project Live Link" target="_blank"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
+                    <a href="https://replit.com/@john-albright/exercise-tracker-free-code-camp" title="Exercise Tracker Replit Live Link" target="_blank"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="project-block">
@@ -114,7 +121,7 @@
                 <div class="project-link">
                     <a href="https://github.com/john-albright/url-shortener-microservice-free-code-camp" target="_blank" title="URL Shortener GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github contact-links"></i></a>
                     &nbsp;
-                    <a href="https://replit.com/@john-albright/url-shortener-microservice-free-code-camp" title="URL Shortener Replit Project Live Link" target="_blank"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
+                    <a href="https://replit.com/@john-albright/url-shortener-microservice-free-code-camp" title="URL Shortener Replit Live Link" target="_blank"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
                 </div>
             </div>
             <div class="project-block">
@@ -124,7 +131,7 @@
                 <div class="project-link">
                     <a href="https://github.com/john-albright/request-header-parser-microservice-free-code-camp" target="_blank" title="Request Header Parser GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github contact-links"></i></a>
                     &nbsp;
-                    <a href="https://replit.com/@john-albright/request-header-parser-microservice-free-code-camp" title="Request Header Parser Replit Project Live Link" target="_blank"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
+                    <a href="https://replit.com/@john-albright/request-header-parser-microservice-free-code-camp" title="Request Header Parser Replit Live Link" target="_blank"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
                 </div>
             </div>
         </div>
@@ -147,7 +154,7 @@
             <div class="project-block">
                 <img class="project-image" src="images/health-and-welness-ios-application.png" alt="Health & Wellness iOS Application Screenshot">
                 <div class="project-title">Health & Wellness iOS Application</div>
-                <div class="project-description">Swift</div>
+                <div class="project-description">Swift, XCode</div>
                 <div class="project-link">
                     <a href="https://github.com/john-albright/health-and-wellness-ios-application" target="_blank" title="Health & Wellness iOS App GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github contact-links"></i></a>
                     &nbsp;
@@ -339,18 +346,20 @@
                 <div class="other-details">
                 Completed the Spanish version of the course (3 modules)
                 <ul>
-                    <li>Module 1: 
-                    <span class="java-info-to-fade">Empezando a programar</span>&nbsp;
-                    <a class="education-links" href="https://courses.edx.org/certificates/d4cca0f61f934fc98165718e3ba8c8bc" target="_blank" title="EdX Certificate Module 1"><i class="fa fa-graduation-cap" aria-hidden="true"></i>
-                    </a>
+                    <li>
+                        Module 1: 
+                        <span class="java-info-to-fade">Empezando a programar</span>&nbsp;
+                        <a class="education-links" href="https://courses.edx.org/certificates/d4cca0f61f934fc98165718e3ba8c8bc" target="_blank" title="EdX Certificate Module 1"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
                     </li>
-                    <li>Module 2: 
-                    <span class="java-info-to-fade">Escribiendo buen código</span>&nbsp;
-                    <a class="education-links" href="https://courses.edx.org/certificates/982672aff19e48e5a4aac35a4cd5be20" target="_blank" title="EdX Certificate Module 2"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+                    <li>
+                        Module 2: 
+                        <span class="java-info-to-fade">Escribiendo buen código</span>&nbsp;
+                        <a class="education-links" href="https://courses.edx.org/certificates/982672aff19e48e5a4aac35a4cd5be20" target="_blank" title="EdX Certificate Module 2"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
                     </li>
-                    <li>Module 3: 
-                    <span class="java-info-to-fade">Estructuras de datos y algoritmos</span>&nbsp;
-                    <a class="education-links" href="https://courses.edx.org/certificates/791f4fe687c0445cbeaff343e77f7eb4" target="_blank" title="EdX Certificate Module 3"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+                    <li>
+                        Module 3: 
+                        <span class="java-info-to-fade">Estructuras de datos y algoritmos</span>&nbsp;
+                        <a class="education-links" href="https://courses.edx.org/certificates/791f4fe687c0445cbeaff343e77f7eb4" target="_blank" title="EdX Certificate Module 3"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
                     </li>
                 </ul>
                 </div>
@@ -359,9 +368,9 @@
         <div class="education-entry">
             <div class="degree">
                 <span>
-                Computational Thinking Using Python&nbsp;
-                <a class="education-links" href="https://www.edx.org/xseries/mitx-computational-thinking-using-python" target="_blank" title="EdX Curriculum"><i class="fa fa-bookmark" style="font-size: 18px" aria-hidden="true"></i></a>
-                <a class="education-links" href="https://credentials.edx.org/records/programs/shared/31035badbc2b47eb9896abcafa64d718/" target="_blank" title="EdX Certificate" alt="EdX certificate"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
+                    Computational Thinking Using Python&nbsp;
+                    <a class="education-links" href="https://www.edx.org/xseries/mitx-computational-thinking-using-python" target="_blank" title="EdX Curriculum"><i class="fa fa-bookmark" style="font-size: 18px" aria-hidden="true"></i></a>
+                    <a class="education-links" href="https://credentials.edx.org/records/programs/shared/31035badbc2b47eb9896abcafa64d718/" target="_blank" title="EdX Certificate" alt="EdX certificate"><i class="fa fa-graduation-cap" aria-hidden="true"></i></a>
                 </span>
                 <span class="div-expander">&#43;</span>
             </div>

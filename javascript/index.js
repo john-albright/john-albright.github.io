@@ -40,27 +40,34 @@ $(document).ready(function() {
     }
   });
   
-  // Add some Bootstrap classes
+  // Add a Bootstrap class
   $(".expand-all-btn").addClass("float-right");
-  $("#navbar > ul").addClass("d-flex flex-row");
+  
+  //$("#sub-navbar").addClass("sub-navbar-show");
   
   // Reveal the hidden content of each education-entry div
   $(".div-expander").on('click', expandOneDiv);
   
-  // reveal all hidden content (other-details) of the education section
+  function expandOneDiv() {
+    $(this).parents(".education-entry").find(".other-details").slideToggle(300);
+    $(this).toggleClass("rotate-expander");
+  }
+
+  // Reveal all hidden content (other-details) of the education section
   $(".expand-all-btn").on("click", function() {
     $(".other-details").slideToggle(300);
     $(".div-expander").toggleClass("rotate-expander");
     var text = $(this).text();
     $(".expand-all-btn").text(text == "Collapse" ? "Expand" : "Collapse");
   });
-  
-  function expandOneDiv() {
-    $(this).parents(".education-entry").find(".other-details").slideToggle(300);
+
+  // Reveal the sub-navbar when the navbar-expander is clicked
+  $("#navbar-submenu-expander").on("click", function() {
+    $("#sub-navbar").toggle(300).css("display", "grid");
     $(this).toggleClass("rotate-expander");
-  }
+  });
   
-  // Call function on load
+  // Call function on load to determine size of projects background image 
   changeProjectImageHeight();
   
   // Call function every time the div projects is resized
