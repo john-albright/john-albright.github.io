@@ -1,0 +1,50 @@
+$purple-red-transparent: rgba(50, 0, 40, 0.967);
+$super-light-pink: rgb(250, 200, 250);
+
+footer {
+    height: 500px;
+    color: white;
+    
+    p {
+        text-align: center;
+    }
+    
+    hr {
+        color: $super-light-pink;
+        border-top: 5px magenta solid;
+        border-bottom: 5px indigo solid;
+        filter: blur(2px);
+    }
+  }
+  
+#contact-links {
+    font-size: 50px;
+    text-align: center;
+    padding: 40px 0px;
+
+    a {
+        padding: 0px 10px;
+        
+        &:hover, &:active {
+            transition: color 0.4s ease-in;
+        }
+    }
+} 
+  
+#phone-symbol {
+    font-size: 35px;
+    transform: translateY(-3px);
+}
+
+#replit-logo {
+    width: 60px;
+    height: 60px;
+    transform: translateY(-4px);
+}
+  
+#codepen-logo {
+    width: 53px;
+    height: 53px;
+    transform: translateY(-2px);
+}
+  

@@ -1,8 +1,8 @@
-/* EXTERNAL FONTS */
+// EXTERNAL FONTS
 @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Montserrat:wght@300&display=swap');
 
-/* SASS Color Variables */
+// SASS Color Variables
 $purple-red-transparent: rgba(50, 0, 40, 0.967);
 $purple-blue-transparent: rgba(40, 0, 50, 0.5);
 $maroon: rgb(90, 0, 0);
@@ -13,6 +13,29 @@ $light-purple: rgba(100, 50, 180, 0.5);
 $purple-silver: rgb(80, 50, 100);
 $light-blue: rgb(100, 100, 200, 0.7);
 $burple: rgb(50, 50, 130, 0.967);
+
+/*============
+  GENERAL BODY STYLES 
+==============*/
+
+body {
+  background-color: $maroon;
+  color: ghostwhite;
+  font-family: Montserrat, sans-serif;
+}
+
+h2, h3, h4, h5 {
+  padding: 10px 20px;
+}
+
+h1, h2 {
+  text-align: center;
+  padding-top: 90px;
+}
+
+p {
+  padding: 5px 40px;
+}
 
 /*============
   NAVBAR STYLES 
@@ -115,29 +138,6 @@ $burple: rgb(50, 50, 130, 0.967);
 }
 
 /*============
-  GENERAL BODY STYLES 
-==============*/
-
-body {
-  background-color: $maroon;
-  color: ghostwhite;
-  font-family: Montserrat, sans-serif;
-}
-
-h2, h3, h4, h5 {
-  padding: 10px 20px;
-}
-
-h1, h2 {
-  text-align: center;
-  padding-top: 90px;
-}
-
-p {
-  padding: 5px 40px;
-}
-
-/*============
   WELCOME STYLES 
 ==============*/
 
@@ -199,7 +199,7 @@ p {
 .projects-overflow {
   white-space: nowrap;
   position: relative;  
-  height: 540px;
+  height: 540px; // 90px more than the project-block
   width: 90%;
   margin: 20px auto;
   padding: 50px;
@@ -215,6 +215,7 @@ p {
 }
 
 .projects-grid {
+  width: 100%;
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(550px, 1fr));
   grid-column-gap: 30px;
@@ -323,19 +324,21 @@ p {
   grid-template-columns: 5fr 1fr 20px;
 }
 
+.school {
+  display: grid;
+  grid-template-columns: 0.6fr 0.4fr;
+  padding: 10px;
+}
+
 .institution {
   color: lightsteelblue;
   font-style: italic;
-}
-
-.school {
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-  padding: 10px;
+  //border: 1px solid black;
 }
 
 .dates {
   justify-self: end;
+  //border: 1px solid black;
 }
 
 .other-details {
@@ -373,6 +376,17 @@ p {
   DIV EXPANDER STYLES 
 ==============*/
 
+#navbar-menu-expander {
+  display: none;
+  width: 25px;
+  height: 40px;
+  font-size: 40px;
+  line-height: 40px;
+  cursor: pointer;
+  color: magenta;
+  transition: 0.3s linear;
+}
+
 #navbar-submenu-expander {
   width: 25px;
   height: 40px;
@@ -382,7 +396,7 @@ p {
   margin-left: 20px;
   cursor: pointer;
   color: magenta;
-  transition: transform 0.3s, color 0.3s linear;
+  transition: 0.3s linear;
 }
 
 .div-expander {
@@ -394,13 +408,21 @@ p {
   transition: 0.3s linear;
 }
 
-.div-expander:hover, #navbar-submenu-expander:hover {
+.div-expander:hover, #navbar-submenu-expander:hover, 
+#navbar-menu-expander:hover, 
+#this-page-links:hover, #other-pages-links:hover {
   color: $light-maroon;
   transition: 0.3s linear;
 }
 
 .rotate-expander {
   transform: rotate(-45deg);
+}
+
+#this-page-links, #other-pages-links {
+  display: none;
+  cursor: pointer;
+  color: magenta;
 }
 
 /*============
@@ -428,43 +450,42 @@ p {
 }
 
 /*============
-  FOOTER STYLES 
+  FOOTER COLOR STYLES 
 ==============*/
 
 footer {
-  height: 500px;
-  
-  p {
-    text-align: center;
+    a {
+      color: $super-light-pink;
+      
+      &:hover, &:active {
+          color: $purple-red-transparent;
+      }
+    }
+}
+
+#replit-logo {
+  .cls-2, .cls-3 {
+    fill: $super-light-pink;
   }
   
-  hr {
-    color: $super-light-pink;
-    border-top: 5px magenta solid;
-    border-bottom: 5px indigo solid;
-    filter: blur(2px);
+  &:hover {
+    .cls-2, .cls-3 {
+      fill: $purple-red-transparent;
+    }
   }
 }
 
-#contact-links {
-  font-size: 50px;
-  text-align: center;
-  padding: 40px 0px;
-  
-  a {
-    padding: 0px 10px;
-    color: $super-light-pink;
-    
-    &:hover, &:active {
-      color: $purple-red-transparent;
-      transition: color 0.2s ease-in;
-    }
-  }
-} 
+#codepen-logo {
 
-#phone-symbol {
-  font-size: 35px;
-  transform: translateY(-3px);
+  .outer-ring, .inner-box {
+      fill: $super-light-pink;
+  }
+
+  &:hover {
+      .outer-ring, .inner-box {
+          fill: $purple-red-transparent;
+      }
+  }
 }
 
 /*======================
@@ -485,43 +506,32 @@ footer {
   border-radius: 100vw;
 }
 
-
 /*======================
   SVG LINK STYLES 
 ========================*/
 
 #replit-logo {
-  width: 60px;
-  height: 60px;
-  transform: translateY(-4px);
   
   .cls-2, .cls-3 {
     fill: $super-light-pink;
-    transition: 0.3s;
   }
   
   &:hover {
     .cls-2, .cls-3 {
       fill: $purple-red-transparent;
-      transition: 0.3s;
     }
   }
 }
 
 #codepen-logo {
-  width: 53px;
-  height: 53px;
-  transform: translateY(-2px);
   
   .outer-ring, .inner-box {
     fill: $super-light-pink;
-    transition: 0.3s;
   }
   
   &:hover {
     .outer-ring, .inner-box {
       fill: $purple-red-transparent;
-      transition: 0.3s;
     }
   }
 }
@@ -551,12 +561,132 @@ footer {
   
 ************/
 
-/*============
-  RESPONSIVE STYLES 
-==============*/
+/*==========================
+  RESPONSIVE STYLES: MOBILE 
+============================*/
 
-@media screen and (max-width: 890px) {
+@media screen and (max-width: 600px) {
+
+  h3, h4, h5 {
+    font-size: 35px;
+  }
+  
+  h1, h2 {
+    font-size: 50px;
+  }
+
+  #welcome-section {
+    h1 {
+      font-size: 30px;
+    }
+  }
+
+  #navbar {
+    height: 65px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    padding-left: 40px;
+
+
+    ul {
+      background-color: $purple-red-transparent;
+      display: none;
+      position: absolute;
+      margin-top: 260px;
+      width: 100%;
+      grid-template-columns: 1fr;
+    }
+  }
+
+  #navbar-menu-expander {
+    display: grid;
+  }
+
+  #navbar-submenu-expander, #navbar-menu-expander {
+    margin-left: 20px;
+    height: 40px;
+    width: 30px;
+    font-size: 50px;
+    //border: 1px solid black;
+  }
+
+  #this-page-links, #other-pages-links {
+    display: grid;
+    justify-self: end;
+  }
+
+  #sub-navbar {
+    margin-top: 65px;
+  }
+
+  .education-entry {
+    width: 94%;
+    margin: 20px auto;
+  }
+
+  .degree {
+    font-size: 25px;
+  }
+
+  .school-info {
+    font-size: 20px;
+  }
+
+  .school {
+    grid-template-columns: 1fr;
+  }
+
   .dates {
     justify-self: start;
+  }
+}
+
+/*==========================
+  RESPONSIVE STYLES: MEDIUM 
+============================*/
+
+@media screen and (max-width: 1132px) {
+  .projects-overflow {
+    height: 600px;
+    padding: 15px;
+    margin: 10px auto;
+  }
+  
+  .project-block {
+    height: 562px; // 1.5 times larger & rounded up
+    width: 688px;  // 1.5 times larger & rounded up
+  }
+  
+  .project-image {
+    height: 375px; // 1.5 times larger
+    width: 675px; // 1.5 times larger
+    display: inline-block;
+    margin: 2px 4px;
+  }
+
+  .project-title {
+    font-size: 45px;
+  }
+
+  .project-description {
+    font-size: 25px;
+  }
+
+  .project-tv-link {
+    font-size: 35px;
+  }
+
+  .project-github-link {
+    font-size: 40px;
+  }
+
+  #c-sharp-project {
+    .project-github-link {
+      transform: translateY(-3px);
+    }
+  }
+
+  .education-entry {
+    width: 80%;
+    margin: 20px auto;
   }
 }

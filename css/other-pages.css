@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Grey+Qo&family=Montserrat:wght@300&display=swap");
+body {
+  color: ghostwhite;
+  font-family: Montserrat, sans-serif;
+}
+
+h1, h2 {
+  text-align: center;
+  padding-top: 150px;
+}
+
+/*==============
+  NAVBAR STYLES 
+================*/
+navbar {
+  position: fixed;
+  display: grid;
+  align-items: center;
+  width: 100%;
+  height: 65px;
+  z-index: 1;
+  font-size: 22px;
+  font-weight: 900;
+}
+navbar ul {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1.5fr;
+  column-gap: 20px;
+  align-items: center;
+  padding: 0px 15px;
+  margin: 0px;
+}
+navbar li {
+  list-style-type: none;
+  padding: 10px;
+}
+navbar a {
+  text-decoration: none;
+  justify-self: start;
+}
+navbar a:hover, navbar a:active {
+  text-decoration: none;
+  transition: 0.4s;
+}
+
+#return-home {
+  justify-self: end;
+}
+
+/*==============
+  GRID STYLES 
+================*/
+.div-grid {
+  margin: 20px 15%;
+}
+
+.grid-expander {
+  height: 45px;
+  font-size: 30px;
+  font-weight: bold;
+  cursor: pointer;
+  transform: rotate(0deg);
+  transition: 0.4s;
+}
+
+.dates {
+  justify-self: end;
+}
+
+.more-info {
+  padding: 10px;
+  letter-spacing: 1px;
+}
+
+.hidden-info {
+  padding: 10px;
+  display: none;
+}
+
+.rotate-expander {
+  transform: rotate(-45deg);
+}
+
+/*==============
+  RESPONSIVE STYLES 
+================*/
+@media screen and (max-width: 700px) {
+  navbar ul {
+    grid-template-columns: 1.5fr 1.5fr 1fr;
+  }
+}
+@media screen and (max-width: 550px) {
+  navbar {
+    font-size: 15px;
+  }
+  navbar ul {
+    grid-template-columns: 1fr 1fr 1fr;
+    column-gap: 0px;
+    padding: 0px 0px;
+  }
+  navbar ul a, navbar ul #return-home {
+    justify-self: center;
+  }
+}
+
+/*# sourceMappingURL=other-pages.css.map */

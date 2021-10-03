@@ -1,0 +1,58 @@
+// COLOR VARIABLES
+$dark-maroon: hsl(350, 70%, 15%);
+$dark-pink: hsl(350, 70%, 30%);
+$dark-purple: hsl(330, 80%, 20%);
+$pink-purple: hsla(330, 70%, 30%, 0.967);
+$purplish-blue: hsl(320, 50%, 40%);
+$cotton-candy: hsl(330, 70%, 80%);
+
+body {
+    background-color: $dark-maroon;
+}
+
+navbar {
+    background-color: $pink-purple;
+
+    a:link, a:visited {
+        color: $cotton-candy;
+    }
+
+    a:hover, a:active {
+        color: white;
+        background-color: $dark-purple;
+    }
+}
+
+footer {
+    a {
+        color: $cotton-candy;
+        
+        &:hover, &:active {
+            color: $purplish-blue;
+        }
+    }
+}
+
+#replit-logo {
+    .cls-2, .cls-3 {
+      fill: $cotton-candy;
+    }
+    
+    &:hover {
+      .cls-2, .cls-3 {
+        fill: $purplish-blue;
+      }
+    }
+}
+  
+#codepen-logo {
+    .outer-ring, .inner-box {
+        fill: $cotton-candy;
+    }
+
+    &:hover {
+        .outer-ring, .inner-box {
+            fill: $purplish-blue;
+        }
+    }
+}

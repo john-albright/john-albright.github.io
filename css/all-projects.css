@@ -1,0 +1,80 @@
+body {
+  background-color: #410b41;
+}
+
+navbar {
+  background-color: rgba(94, 23, 130, 0.967);
+}
+navbar a:link, navbar a:visited {
+  color: #d8a8f0;
+}
+navbar a:hover, navbar a:active {
+  color: white;
+  background-color: #330a5c;
+}
+
+.project-name {
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #330a5c;
+  border: 1px solid indigo;
+}
+
+.more-info {
+  background-color: #821782;
+  border-color: indigo;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+}
+
+.grid-expander:hover {
+  color: #410b41;
+  transition: 0.4s;
+}
+
+.shown-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+}
+
+a {
+  padding: 0px 10px;
+  color: #d8a8f0;
+}
+a:hover, a:active {
+  color: #443399;
+  transition: color 0.3s;
+}
+
+#replit-logo {
+  width: 60px;
+  height: 60px;
+  transform: translateY(-4px);
+}
+#replit-logo .cls-2, #replit-logo .cls-3 {
+  fill: #d8a8f0;
+  transition: 0.3s;
+}
+#replit-logo:hover .cls-2, #replit-logo:hover .cls-3 {
+  fill: #443399;
+  transition: 0.3s;
+}
+
+#codepen-logo {
+  width: 53px;
+  height: 53px;
+  transform: translateY(-2px);
+}
+#codepen-logo .outer-ring, #codepen-logo .inner-box {
+  fill: #d8a8f0;
+  transition: 0.3s;
+}
+#codepen-logo:hover .outer-ring, #codepen-logo:hover .inner-box {
+  fill: #443399;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=all-projects.css.map */

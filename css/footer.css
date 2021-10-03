@@ -1,0 +1,44 @@
+footer {
+  height: 500px;
+  color: white;
+}
+footer p {
+  text-align: center;
+}
+footer hr {
+  color: #fac8fa;
+  border-top: 5px magenta solid;
+  border-bottom: 5px indigo solid;
+  filter: blur(2px);
+}
+
+#contact-links {
+  font-size: 50px;
+  text-align: center;
+  padding: 40px 0px;
+}
+#contact-links a {
+  padding: 0px 10px;
+}
+#contact-links a:hover, #contact-links a:active {
+  transition: color 0.2s ease-in;
+}
+
+#phone-symbol {
+  font-size: 35px;
+  transform: translateY(-3px);
+}
+
+#replit-logo {
+  width: 60px;
+  height: 60px;
+  transform: translateY(-4px);
+}
+
+#codepen-logo {
+  width: 53px;
+  height: 53px;
+  transform: translateY(-2px);
+}
+
+/*# sourceMappingURL=footer.css.map */

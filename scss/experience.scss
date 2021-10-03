@@ -1,0 +1,90 @@
+// COLOR VARIABLES
+$ocean-blue: hsl(220, 90%, 20%);
+$lighter-blue: hsl(220, 70%, 40%);
+$dark-blue-green: hsl(190, 80%, 20%);
+$aqua-blue: hsla(200, 70%, 30%, 0.967);
+$green: hsl(150, 70%, 20%);
+$light-sea-green: hsl(200, 70%, 80%);
+
+body {
+    background-color: $ocean-blue;
+}
+
+navbar {
+    background-color: $aqua-blue;
+
+    a:link, a:visited {
+        color: $light-sea-green;
+    }
+
+    a:hover, a:active {
+        color: white;
+        background-color: $dark-blue-green;
+    }
+}
+
+.workplace {
+    display: grid;
+    grid-template-columns: 1fr 20px;
+    align-items: center;
+    padding: 10px;
+    font-size: 20px;
+    background-color: $dark-blue-green;
+    border: 1px solid midnightblue;
+}
+
+.more-info {
+    background-color: $lighter-blue;
+    border-color: darkblue;
+    border-style: solid;
+    border-width: 0px 1px 1px 1px;
+}
+
+.grid-expander:hover {
+    color: $ocean-blue;
+    transition: 0.4s;
+}
+
+.shown-info {
+    display: grid;
+    grid-template-columns: 2fr 1fr;
+    align-items: center;
+}
+
+.dates {
+    justify-self: end;
+}
+
+footer > a {
+    color: $light-sea-green;
+    
+    &:hover, &:active {
+        color: $green;
+    }
+}
+
+#replit-logo {
+    .cls-2, .cls-3 {
+      fill: $light-sea-green;
+      transition: 0.3s;
+    }
+    
+    &:hover {
+      .cls-2, .cls-3 {
+        fill: $green;
+        transition: 0.3s;
+      }
+    }
+  }
+  
+#codepen-logo {
+    .outer-ring, .inner-box {
+        fill: $light-sea-green;
+    }
+
+    &:hover {
+        .outer-ring, .inner-box {
+            fill: $green;
+        }
+    }
+}

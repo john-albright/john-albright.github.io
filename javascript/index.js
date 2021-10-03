@@ -43,8 +43,6 @@ $(document).ready(function() {
   // Add a Bootstrap class
   $(".expand-all-btn").addClass("float-right");
   
-  //$("#sub-navbar").addClass("sub-navbar-show");
-  
   // Reveal the hidden content of each education-entry div
   $(".div-expander").on('click', expandOneDiv);
   
@@ -61,17 +59,49 @@ $(document).ready(function() {
     $(".expand-all-btn").text(text == "Collapse" ? "Expand" : "Collapse");
   });
 
-  // Reveal the sub-navbar when the navbar-expander is clicked
-  $("#navbar-submenu-expander").on("click", function() {
-    $("#sub-navbar").toggle(300).css("display", "grid");
-    $(this).toggleClass("rotate-expander");
+  // Reveal the sub-navbar when the navbar-submenu-expander is clicked
+  $("#navbar-submenu-expander, #other-pages-links").on("click", function() {
+    var width = $(window).width();
+    //console.log(width);
+    
+    if ($("#navbar > ul").is(":visible") && width < 600) {
+      toggleNavBar(100);
+    }
+    toggleSubNavBar(400);
   });
+
+  // Reveal the navbar unordered list when the navbar-menu-expander is clicked
+  $("#navbar-menu-expander, #this-page-links").on("click", function() {
+    if ($("#sub-navbar").is(":visible")) {
+      toggleSubNavBar(100);
+    }
+    toggleNavBar(400);
+  });
+
+  function toggleNavBar(time) {
+    $("#navbar > ul").toggle(time).css("display", "grid");
+    $("#navbar-menu-expander").toggleClass("rotate-expander");
+  }
+
+  function toggleSubNavBar(time) {
+    $("#sub-navbar").toggle(time).css("display", "grid");
+    $("#navbar-submenu-expander").toggleClass("rotate-expander");
+  }
   
   // Call function on load to determine size of projects background image 
   changeProjectImageHeight();
   
-  // Call function every time the div projects is resized
-  $(window).on("resize", changeProjectImageHeight);
+  // Operations to perform when the window is resized
+  $(window).on("resize", function() {
+    changeProjectImageHeight();
+
+    var width = $(window).width();
+
+    if (width > 600 && !$("#navbar > ul").is(":visible")) {
+      $("#navbar > ul").show();
+      $("#navbar-menu-expander").css("transform", "rotate(0deg)");
+    }
+  });
   
   // Change the height of the img in the projects section to match the size of the div
   function changeProjectImageHeight() {
@@ -125,31 +155,5 @@ $(document).ready(function() {
       
     });
   }
-
-  /**************
-  Old code for transitioning colors with svg symbols
-  I couldn't get the colors to transition properly. 
-    
-  var replitClasses = $("#replit-logo").find(".cls-3, .cls-2");
-  var codePenClasses = $("#codepen-logo").find(".inner-box, .outer-ring");
-  var lightPink = replitClasses.css("fill");
-  var purpleRed = "rgba(50, 0, 40, 0.967)";
-  
-  // Create hover effect for Replit svg
-  /*$(".replit-logo-footer").hover(
-    function() {
-      replitClasses.animate({"fill": purpleRed}, 1000);
-    }, function() {
-      replitClasses.animate({"fill": lightPink}, 1000);
-  });
-  
-  // Create hover effect for CodePen svg
-  $(".codepen-logo-footer").hover(
-    function() {
-      codePenClasses.css({"fill": purpleRed});
-  }, function() {
-      codePenClasses.css({"fill": lightPink});
-  }); 
-  ********/
   
 }); // end of jQuery document.ready() function

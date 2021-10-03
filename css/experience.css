@@ -1,0 +1,85 @@
+body {
+  background-color: #052461;
+}
+
+navbar {
+  background-color: rgba(23, 94, 130, 0.967);
+}
+navbar a:link, navbar a:visited {
+  color: #a8d8f0;
+}
+navbar a:hover, navbar a:active {
+  color: white;
+  background-color: #0a4e5c;
+}
+
+.workplace {
+  display: grid;
+  grid-template-columns: 1fr 20px;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  background-color: #0a4e5c;
+  border: 1px solid midnightblue;
+}
+
+.more-info {
+  background-color: #1f4ead;
+  border-color: darkblue;
+  border-style: solid;
+  border-width: 0px 1px 1px 1px;
+}
+
+.grid-expander:hover {
+  color: #052461;
+  transition: 0.4s;
+}
+
+.shown-info {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  align-items: center;
+}
+
+.dates {
+  justify-self: end;
+}
+
+a {
+  padding: 0px 10px;
+  color: #a8d8f0;
+}
+a:hover, a:active {
+  color: #0f5733;
+  transition: color 0.3s;
+}
+
+#replit-logo {
+  width: 60px;
+  height: 60px;
+  transform: translateY(-4px);
+}
+#replit-logo .cls-2, #replit-logo .cls-3 {
+  fill: #a8d8f0;
+  transition: 0.3s;
+}
+#replit-logo:hover .cls-2, #replit-logo:hover .cls-3 {
+  fill: #0f5733;
+  transition: 0.3s;
+}
+
+#codepen-logo {
+  width: 53px;
+  height: 53px;
+  transform: translateY(-2px);
+}
+#codepen-logo .outer-ring, #codepen-logo .inner-box {
+  fill: #a8d8f0;
+  transition: 0.3s;
+}
+#codepen-logo:hover .outer-ring, #codepen-logo:hover .inner-box {
+  fill: #0f5733;
+  transition: 0.3s;
+}
+
+/*# sourceMappingURL=experience.css.map */

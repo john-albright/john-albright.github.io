@@ -1,0 +1,37 @@
+body {
+  background-color: #410b14;
+}
+
+navbar {
+  background-color: rgba(130, 23, 77, 0.967);
+}
+navbar a:link, navbar a:visited {
+  color: #f0a8cc;
+}
+navbar a:hover, navbar a:active {
+  color: white;
+  background-color: #5c0a33;
+}
+
+footer a {
+  color: #f0a8cc;
+}
+footer a:hover, footer a:active {
+  color: #993377;
+}
+
+#replit-logo .cls-2, #replit-logo .cls-3 {
+  fill: #f0a8cc;
+}
+#replit-logo:hover .cls-2, #replit-logo:hover .cls-3 {
+  fill: #993377;
+}
+
+#codepen-logo .outer-ring, #codepen-logo .inner-box {
+  fill: #f0a8cc;
+}
+#codepen-logo:hover .outer-ring, #codepen-logo:hover .inner-box {
+  fill: #993377;
+}
+
+/*# sourceMappingURL=photography.css.map */
