@@ -1,16 +1,16 @@
 body {
-  background-color: #410b14;
+  background-color: #6c1340;
 }
 
 navbar {
-  background-color: rgba(130, 23, 77, 0.967);
+  background-color: rgba(130, 23, 112, 0.967);
 }
 navbar a:link, navbar a:visited {
   color: #f0a8cc;
 }
 navbar a:hover, navbar a:active {
   color: white;
-  background-color: #5c0a33;
+  background-color: #8a0f61;
 }
 
 footer a {

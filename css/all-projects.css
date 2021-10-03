@@ -1,5 +1,5 @@
 body {
-  background-color: #410b41;
+  background-color: #570557;
 }
 
 navbar {
@@ -31,7 +31,7 @@ navbar a:hover, navbar a:active {
 }
 
 .grid-expander:hover {
-  color: #410b41;
+  color: #570557;
   transition: 0.4s;
 }
 
@@ -40,41 +40,69 @@ navbar a:hover, navbar a:active {
   grid-template-columns: 2fr 1fr;
 }
 
-a {
-  padding: 0px 10px;
+.project-github-link {
+  font-size: 32px;
+}
+
+.project-tv-link {
+  font-size: 28px;
+}
+
+main h4 {
+  padding: 10px 20px;
+  text-indent: 2%;
+  background-image: radial-gradient(circle, #821782, #361fad, #330a5c);
+  margin: 0px 10%;
+  border-radius: 2px;
+  box-shadow: 1px 1px 10px darkslateblue;
+}
+
+.expand-all-projects {
+  font-size: 16px;
+  margin: auto 15px auto auto;
+  padding: 5px;
+  color: #d8a8f0;
+  background-color: #361fad;
+  border: 1px solid indigo;
+  transition: 0.4s linear;
+}
+
+.expand-all-projects:hover {
+  background-color: #821782;
+  transition: 0.4s linear;
+}
+
+/*==========================
+  FOOTER COLOR STYES
+============================*/
+footer a {
   color: #d8a8f0;
 }
-a:hover, a:active {
-  color: #443399;
-  transition: color 0.3s;
+footer a:hover, footer a:active {
+  color: #361fad;
 }
 
-#replit-logo {
-  width: 60px;
-  height: 60px;
-  transform: translateY(-4px);
-}
 #replit-logo .cls-2, #replit-logo .cls-3 {
   fill: #d8a8f0;
-  transition: 0.3s;
 }
 #replit-logo:hover .cls-2, #replit-logo:hover .cls-3 {
-  fill: #443399;
-  transition: 0.3s;
+  fill: #361fad;
 }
 
-#codepen-logo {
-  width: 53px;
-  height: 53px;
-  transform: translateY(-2px);
-}
 #codepen-logo .outer-ring, #codepen-logo .inner-box {
   fill: #d8a8f0;
-  transition: 0.3s;
 }
 #codepen-logo:hover .outer-ring, #codepen-logo:hover .inner-box {
-  fill: #443399;
-  transition: 0.3s;
+  fill: #361fad;
+}
+
+.project-link-icon {
+  color: #821782;
+  transition: 0.3s linear;
+}
+.project-link-icon:hover {
+  transition: 0.3 linear;
+  color: #361fad;
 }
 
 /*# sourceMappingURL=all-projects.css.map */

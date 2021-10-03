@@ -55,6 +55,10 @@ navbar a:hover, navbar a:active {
   margin: 20px 15%;
 }
 
+.grid-unit {
+  margin-top: 30px;
+}
+
 .grid-expander {
   height: 45px;
   font-size: 30px;

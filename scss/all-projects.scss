@@ -1,9 +1,9 @@
 // COLOR VARIABLES
-$dark-maroon: hsl(300, 70%, 15%);
+$dark-maroon: hsl(300, 90%, 18%);
 $dark-pink: hsl(300, 70%, 30%);
 $dark-purple: hsl(270, 80%, 20%);
 $pink-purple: hsla(280, 70%, 30%, 0.967);
-$purplish-blue: hsl(250, 50%, 40%);
+$purplish-blue: hsl(250, 70%, 40%);
 $cotton-candy: hsl(280, 70%, 80%);
 
 body {
@@ -50,26 +50,66 @@ navbar {
     grid-template-columns: 2fr 1fr;
 }
 
-footer a {
+.project-github-link {
+    font-size: 32px;
+}
+
+.project-tv-link {
+    font-size: 28px;
+}
+
+main {
+    h4 {
+        padding: 10px 20px;
+        text-indent: 2%;
+        background-image: radial-gradient(circle, $dark-pink, $purplish-blue, $dark-purple);
+        margin: 0px 10%;
+        border-radius: 2px;
+        box-shadow: 1px 1px 10px darkslateblue;
+    }
+}
+
+.expand-all-projects {
+    font-size: 16px;
+    margin: auto 15px auto auto;
+    padding: 5px;
     color: $cotton-candy;
-    
-    &:hover, &:active {
-        color: $purplish-blue;
+    background-color: $purplish-blue;
+    border: 1px solid indigo;
+    transition: 0.4s linear;
+}
+
+.expand-all-projects:hover {
+    background-color: $dark-pink;
+    transition: 0.4s linear;
+}
+
+/*==========================
+  FOOTER COLOR STYES
+============================*/
+
+footer {
+    a {
+        color: $cotton-candy;
+        
+        &:hover, &:active {
+            color: $purplish-blue;
+        }
     }
 }
 
 #replit-logo {
     .cls-2, .cls-3 {
         fill: $cotton-candy;
-    }
-    
-    &:hover {
+}
+
+&:hover {
         .cls-2, .cls-3 {
             fill: $purplish-blue;
         }
     }
-  }
-  
+}
+
 #codepen-logo {
     .outer-ring, .inner-box {
         fill: $cotton-candy;
@@ -79,5 +119,15 @@ footer a {
         .outer-ring, .inner-box {
             fill: $purplish-blue;
         }
+    }
+}
+
+.project-link-icon {
+    color: $dark-pink;
+    transition: 0.3s linear;
+
+    &:hover {
+        transition: 0.3 linear;
+        color: $purplish-blue;
     }
 }

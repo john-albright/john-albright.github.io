@@ -1,6 +1,6 @@
 footer {
   height: 500px;
-  color: white;
+  color: ghostwhite;
 }
 footer p {
   text-align: center;
@@ -19,9 +19,10 @@ footer hr {
 }
 #contact-links a {
   padding: 0px 10px;
+  transition: color 0.3s linear;
 }
 #contact-links a:hover, #contact-links a:active {
-  transition: color 0.2s ease-in;
+  transition: color 0.3s linear;
 }
 
 #phone-symbol {
@@ -34,11 +35,23 @@ footer hr {
   height: 60px;
   transform: translateY(-4px);
 }
+#replit-logo .cls-2, #replit-logo .cls-3 {
+  transition: 0.3s linear;
+}
+#replit-logo:hover .cls-2, #replit-logo:hover .cls-3 {
+  transition: 0.3s linear;
+}
 
 #codepen-logo {
   width: 53px;
   height: 53px;
   transform: translateY(-2px);
+}
+#codepen-logo .outer-ring, #codepen-logo .inner-box {
+  transition: 0.3s linear;
+}
+#codepen-logo:hover .outer-ring, #codepen-logo:hover .inner-box {
+  transition: 0.3s linear;
 }
 
 /*# sourceMappingURL=footer.css.map */

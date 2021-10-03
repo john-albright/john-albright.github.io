@@ -1,58 +1,62 @@
 // COLOR VARIABLES
-$dark-maroon: hsl(350, 70%, 15%);
-$dark-pink: hsl(350, 70%, 30%);
-$dark-purple: hsl(330, 80%, 20%);
-$pink-purple: hsla(330, 70%, 30%, 0.967);
-$purplish-blue: hsl(320, 50%, 40%);
-$cotton-candy: hsl(330, 70%, 80%);
+$dark-maroon: hsl(330, 70%, 25%);
+$pink-orange: hsl(350, 70%, 30%);
+$dark-pink: hsl(320, 80%, 30%);
+$dark-pink-transparent: hsla(310, 70%, 30%, 0.967);
+$purple-pink: hsl(320, 50%, 40%);
+$pink-sand: hsl(330, 70%, 80%);
 
 body {
     background-color: $dark-maroon;
 }
 
 navbar {
-    background-color: $pink-purple;
+    background-color: $dark-pink-transparent;
 
     a:link, a:visited {
-        color: $cotton-candy;
+        color: $pink-sand;
     }
 
     a:hover, a:active {
         color: white;
-        background-color: $dark-purple;
+        background-color: $dark-pink;
     }
 }
 
+/*==========================
+  FOOTER COLOR STYES
+============================*/
+
 footer {
     a {
-        color: $cotton-candy;
+        color: $pink-sand;
         
         &:hover, &:active {
-            color: $purplish-blue;
+            color: $purple-pink;
         }
     }
 }
 
 #replit-logo {
     .cls-2, .cls-3 {
-      fill: $cotton-candy;
+      fill: $pink-sand;
     }
     
     &:hover {
       .cls-2, .cls-3 {
-        fill: $purplish-blue;
+        fill: $purple-pink;
       }
     }
 }
   
 #codepen-logo {
     .outer-ring, .inner-box {
-        fill: $cotton-candy;
+        fill: $pink-sand;
     }
 
     &:hover {
         .outer-ring, .inner-box {
-            fill: $purplish-blue;
+            fill: $purple-pink;
         }
     }
 }

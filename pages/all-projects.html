@@ -27,14 +27,14 @@
     <header>
         <navbar>
             <ul>
-                <a href="experience.html">
-                    <li class="external-page">
-                        Experience
-                    </li>
-                </a>
                 <a href="photography.html">
                     <li class="external-page">
                         Photography
+                    </li>
+                </a>
+                <a href="experience.html">
+                    <li class="external-page">
+                        Experience
                     </li>
                 </a>
                 <a href="../index.html" id="return-home">
@@ -49,7 +49,7 @@
         <h1>Projects</h1>
         <h4>
             Flask
-            <button class="expand-all-btn">
+            <button class="expand-all-projects float-right">
             Expand All
             </button>
         </h4>
@@ -58,18 +58,21 @@
                 <div class="project-name">
                     <span>
                         Stocks Investing Application
+                        &nbsp;
+                        <a href="https://github.com/john-albright/stocks-application-cs50-finance" target="_blank" title="GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github"></i></a>
+                        <a href="https://replit.com/@john-albright/stocks-application-cs50-finance" target="_blank" title="Replit Live Link"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
                     </span>
                     <span class="grid-expander">&#43;</span>
                 </div>
                 <div class="more-info">
                     <div class="shown-info">
-                        Flask, JavaScript
+                        Flask, JavaScript, SQL
                     </div> 
                     <div class="hidden-info">
                         <ul>
                             <li>
                                 Uses Python extensively to deal with potential HTML injections and to handle
-                                any errors made when submitting forms
+                                any errors made when making POST or GET requests
                             </li>
                             <li>
                                 Uses Jinja templating to create a streamlined design
@@ -85,32 +88,155 @@
                     </div>
                 </div>
             </div>
+        </div>
+        <h4>
+            Express.js & Mongoose.js
+            <button class="expand-all-projects float-right">
+            Expand All
+            </button>
+        </h4>
+        <div class="div-grid">
             <div class="grid-unit">
                 <div class="project-name">
                     <span>
-                        Stocks Investing Application
+                        Exercise Tracker
+                        &nbsp;
+                        <a href="https://github.com/john-albright/exercise-tracker-free-code-camp" target="_blank" title="GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github"></i></a>
+                        <a href="https://replit.com/@john-albright/exercise-tracker-free-code-camp" target="_blank" title="Replit Live Link"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
                     </span>
                     <span class="grid-expander">&#43;</span>
                 </div>
                 <div class="more-info">
                     <div class="shown-info">
-                        Flask, JavaScript
+                        Express.js, Mongoose.js, MongoDB Atlas
                     </div> 
                     <div class="hidden-info">
                         <ul>
                             <li>
-                                Uses Python extensively to deal with potential HTML injections and to handle
-                                any errors made when submitting forms
+                                Connects to a MongoDB Atlas database via Mongoose.js and accesses two
+                                models: User (/api/users) and Exercise (/api/exercises)
                             </li>
                             <li>
-                                Uses Jinja templating to create a streamlined design
+                                Supports POST requests with forms to either create a username or create
+                                a log of an exercise (as long as a valid user id is provided)
                             </li>
                             <li>
-                                Integrates AJAX requests to the IEX API on the quote.html page to dynamically
-                                generate stock symbols as the user types
+                                Handles three query parameters (to, from, and limit) for GET requests to 
+                                the route /api/users/:_id/logs
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-unit">
+                <div class="project-name">
+                    <span>
+                        URL Shortener Microservice
+                        &nbsp;
+                        <a href="https://github.com/john-albright/url-shortener-microservice-free-code-camp" target="_blank" title="GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github"></i></a>
+                        <a href="https://replit.com/@john-albright/url-shortener-microservice-free-code-camp" target="_blank" title="Replit Live Link"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
+                    </span>
+                    <span class="grid-expander">&#43;</span>
+                </div>
+                <div class="more-info">
+                    <div class="shown-info">
+                        Express.js, Mongoose.js, MongoDB Atlas
+                    </div> 
+                    <div class="hidden-info">
+                        <ul>
+                            <li>
+                                POST requests are made with the lone form at the top of the page - the
+                                user must enter a valid website with a protocol (HTTP or HTTPS) at the beginning
                             </li>
                             <li>
-                                To simplify communication with the SQL database, the CS50 library was used 
+                                Connects to a MongoDB Atlas database via Mongoose.js with the model Url 
+                                (/api/shorturls)
+                            </li>
+                            <li>
+                                Dynamically generates the list of URLs stored in the Url model on the 
+                                bottom of the home page (using an EJS template)
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <h4>
+            Express.js
+            <button class="expand-all-projects float-right">
+            Expand All
+            </button>
+        </h4>
+        <div class="div-grid">
+            <div class="grid-unit">
+                <div class="project-name">
+                    <span>
+                        Timestamp Microservice
+                        &nbsp;
+                        <a href="https://github.com/john-albright/timestamp-microservice-free-code-camp" target="_blank" title="GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github"></i></a>
+                        <a href="https://replit.com/@john-albright/timestamp-microservice-free-code-camp" target="_blank" title="Replit Live Link"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
+                    </span>
+                    <span class="grid-expander">&#43;</span>
+                </div>
+                <div class="more-info">
+                    <div class="shown-info">
+                        Express.js
+                    </div> 
+                    <div class="hidden-info">
+                        <ul>
+                            <li>
+                                Shows the current unix and UTC/GMT time when the subdirectory /api/ is accessed
+                            </li>
+                            <li>
+                                Accepts a date parameter in the same subdirectory, converts it to either 
+                                unix or UTC/GMT, and shows both dates in JSON format
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="grid-unit">
+                <div class="project-name">
+                    <span>
+                        Request Header Parser Microservice
+                        &nbsp;
+                        <a href="https://github.com/john-albright/request-header-parser-microservice-free-code-camp" target="_blank" title="GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github"></i></a>
+                        <a href="https://replit.com/@john-albright/request-header-parser-microservice-free-code-camp" target="_blank" title="Replit Live Link"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
+                    </span>
+                    <span class="grid-expander">&#43;</span>
+                </div>
+                <div class="more-info">
+                    <div class="shown-info">
+                        Express.js
+                    </div> 
+                    <div class="hidden-info">
+                        Displays the ip address, language and internet browser information of the user 
+                        at its unique subdirectory /api/whoami
+                    </div>
+                </div>
+            </div>
+            <div class="grid-unit">
+                <div class="project-name">
+                    <span>
+                        File Metdata 
+                        &nbsp;
+                        <a href="https://github.com/john-albright/file-metadata-microservice-free-code-camp" target="_blank" title="GitHub Repository Link"><i class="project-github-link project-link-icon fab fa-github"></i></a>
+                        <a href="https://replit.com/@john-albright/file-metadata-microservice-free-code-camp" target="_blank" title="Replit Live Link"><i class="project-tv-link project-link-icon fa fa-desktop" aria-hidden="true"></i></a>
+                    </span>
+                    <span class="grid-expander">&#43;</span>
+                </div>
+                <div class="more-info">
+                    <div class="shown-info">
+                        Express.js
+                    </div> 
+                    <div class="hidden-info">
+                        <ul>
+                            <li>
+                                Allows a user to upload any file and make a POST request to the path 
+                                /api/fileanalyse 
+                            </li>
+                            <li>
+                                Returns a JSON object with name, type, and size 
                             </li>
                         </ul>
                     </div>

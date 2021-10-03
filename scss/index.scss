@@ -624,6 +624,7 @@ footer {
   }
 
   .degree {
+    grid-template-columns: 1fr 50px;
     font-size: 25px;
   }
 
@@ -638,13 +639,48 @@ footer {
   .dates {
     justify-self: start;
   }
-}
+
+  .project-block {
+    width: 85%;
+    margin: auto;
+  }
+
+  .project-image {
+    width: 99%;
+  }
+
+  .projects-overflow {
+    height: 550px;
+
+    .project-block {
+      width: 450px;
+    }
+  }
+
+  #degree-to-translate {
+    grid-template-columns: 1fr 0.5fr 50px;
+  }
+
+  #translate-course {
+    justify-self: center;
+  }
+
+  .div-expander {
+    height: 80px;
+    width: 50px;
+    font-size: 50px;
+    text-align: center;
+    margin-right: 30px;
+    padding: 0px;
+  }
+
+} // end of small screen media queries
 
 /*==========================
   RESPONSIVE STYLES: MEDIUM 
 ============================*/
 
-@media screen and (max-width: 1132px) {
+@media (min-width: 601px) and (max-width: 1132px) {
   .projects-overflow {
     height: 600px;
     padding: 15px;
@@ -689,4 +725,4 @@ footer {
     width: 80%;
     margin: 20px auto;
   }
-}
+} // end of medium screen media queries
