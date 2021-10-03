@@ -474,7 +474,7 @@ footer a:hover, footer a:active {
 /*==========================
   RESPONSIVE STYLES: MOBILE 
 ============================*/
-@media screen and (max-width: 600px) {
+@media only screen and (max-width: 480px) {
   h3, h4, h5 {
     font-size: 35px;
   }
@@ -543,9 +543,16 @@ footer a:hover, footer a:active {
     justify-self: start;
   }
 
-  .project-block {
-    width: 85%;
+  .projects-grid {
+    width: 95%;
     margin: auto;
+  }
+
+  .project-block {
+    width: 75%;
+    height: 105%;
+    margin: 0px 0px 0px 1%;
+    border: 1px solid black;
   }
 
   .project-image {
@@ -577,9 +584,16 @@ footer a:hover, footer a:active {
   }
 }
 /*==========================
-  RESPONSIVE STYLES: MEDIUM 
+  TABLET STYLES 
 ============================*/
-@media (min-width: 601px) and (max-width: 1132px) {
+/*==========================
+  DESKTOP STYLES 
+============================*/
+/*==========================
+  LARGE SCREEN STYLES 
+============================*/
+/*
+@media only screen and (min-width: 1132px) {
   .projects-overflow {
     height: 600px;
     padding: 15px;
@@ -587,13 +601,13 @@ footer a:hover, footer a:active {
   }
 
   .project-block {
-    height: 562px;
-    width: 688px;
+    height: 562px; // 1.5 times larger & rounded up
+    width: 688px;  // 1.5 times larger & rounded up
   }
 
   .project-image {
-    height: 375px;
-    width: 675px;
+    height: 375px; // 1.5 times larger
+    width: 675px; // 1.5 times larger
     display: inline-block;
     margin: 2px 4px;
   }
@@ -614,14 +628,18 @@ footer a:hover, footer a:active {
     font-size: 40px;
   }
 
-  #c-sharp-project .project-github-link {
-    transform: translateY(-3px);
+  #c-sharp-project {
+    .project-github-link {
+      transform: translateY(-3px);
+    }
   }
 
   .education-entry {
     width: 80%;
     margin: 20px auto;
   }
-}
+} // end of medium screen media queries
+
+*/
 
 /*# sourceMappingURL=index.css.map */
