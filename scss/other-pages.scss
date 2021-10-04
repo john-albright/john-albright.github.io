@@ -2,6 +2,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Montserrat:wght@300&display=swap');
 
+
+// Mix-in
+$laptop: 992px;
+
+@mixin laptop {
+    @media only screen and (max-width: $laptop) {
+      @content; 
+    }
+  }
+
 body {
     color: ghostwhite;
     font-family: Montserrat, sans-serif;
@@ -64,6 +74,10 @@ navbar {
 
 .div-grid {
     margin: 20px 15%;
+
+    @include laptop {
+        margin: 20px 5%;
+    }
 }
 
 .grid-unit {
@@ -77,10 +91,6 @@ navbar {
     cursor: pointer;
     transform: rotate(0deg);
     transition: 0.4s;
-}
-
-.dates {
-    justify-self: end;
 }
 
 .more-info {

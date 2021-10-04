@@ -308,6 +308,11 @@ p {
 .project-bookmark-link {
   font-size: 18px;
 }
+@media only screen and (max-width: 350px) {
+  .project-bookmark-link {
+    font-size: 12px;
+  }
+}
 
 #project-background-image {
   filter: blur(20px);

@@ -2,6 +2,31 @@ body {
   background-color: #6c1340;
 }
 
+p {
+  padding: 20px 100px;
+}
+
+.photo-entry {
+  width: 70%;
+  border: 3px solid #821729;
+  border-radius: 3px;
+  margin: 30px auto;
+  padding: 20px;
+}
+
+.image-container img {
+  display: block;
+  margin: auto;
+  width: 60vw;
+  border: 3px solid #821729;
+  border-radius: 3px;
+}
+
+.image-caption {
+  text-align: center;
+  margin-top: 20px;
+}
+
 navbar {
   background-color: rgba(130, 23, 112, 0.967);
 }
@@ -13,6 +38,9 @@ navbar a:hover, navbar a:active {
   background-color: #8a0f61;
 }
 
+/*==========================
+  FOOTER COLOR STYES
+============================*/
 footer a {
   color: #f0a8cc;
 }

@@ -361,6 +361,10 @@ p {
 
 .project-bookmark-link {
   font-size: 18px;
+
+  @include xs-screen {
+    font-size: 12px;
+  }
 }
 
 #project-background-image {

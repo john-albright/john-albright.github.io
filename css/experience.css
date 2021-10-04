@@ -1,72 +1,95 @@
 body {
-  background-color: #052461;
+  background-color: #285185;
+  color: white;
 }
 
 navbar {
-  background-color: rgba(23, 94, 130, 0.967);
+  background-color: #3c8071;
 }
 navbar a:link, navbar a:visited {
-  color: #7de8e8;
+  color: #accefc;
 }
 navbar a:hover, navbar a:active {
   color: white;
-  background-color: #093a53;
+  background-color: #46af98;
 }
 
 .workplace {
   display: grid;
-  grid-template-columns: 1fr 20px;
+  grid-template-columns: 1fr 0.5fr 20px;
   align-items: center;
   padding: 10px;
   font-size: 20px;
-  background-color: #093a53;
-  border: 1px solid midnightblue;
+  background-color: #3c8071;
+  border: 1px solid #3c8071;
 }
 
 .more-info {
-  background-color: #2258c3;
-  border-color: darkblue;
+  background-color: #236477;
+  border-color: #3c8071;
   border-style: solid;
   border-width: 0px 1px 1px 1px;
 }
 
 .grid-expander:hover {
-  color: #052461;
+  color: #285185;
   transition: 0.4s;
 }
 
 .shown-info {
   display: grid;
-  grid-template-columns: 2fr 1fr;
+  grid-template-columns: 1fr 0.5fr;
   align-items: center;
 }
 
 .dates {
-  justify-self: end;
+  justify-self: start;
 }
 
+.expand-all-experience {
+  background-color: #236477;
+  color: #accefc;
+  border: 1px solid #3c8071;
+  border-radius: 3px;
+  padding: 5px;
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  transition: 0.3s linear;
+}
+
+.expand-all-experience:hover {
+  color: white;
+  background-color: #3c8071;
+  transition: 0.3s linear;
+}
+
+/*==========================
+  FOOTER COLOR STYES
+============================*/
 footer a {
-  color: #7de8e8;
+  color: #accefc;
 }
 footer a:hover, footer a:active {
-  color: #0f574b;
+  color: #3c8071;
 }
 
 #replit-logo .cls-2, #replit-logo .cls-3 {
-  fill: #7de8e8;
+  fill: #accefc;
   transition: color 0.4s ease-in;
 }
 #replit-logo:hover .cls-2, #replit-logo:hover .cls-3 {
-  fill: #0f574b;
+  fill: #3c8071;
   transition: color 0.4s ease-in;
 }
 
 #codepen-logo .outer-ring, #codepen-logo .inner-box {
-  fill: #7de8e8;
+  fill: #accefc;
   transition: color 0.4s ease-in;
 }
 #codepen-logo:hover .outer-ring, #codepen-logo:hover .inner-box {
-  fill: #0f574b;
+  fill: #3c8071;
   transition: color 0.4s ease-in;
 }
 

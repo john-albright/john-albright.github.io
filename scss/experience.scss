@@ -1,41 +1,41 @@
 // COLOR VARIABLES
-$ocean-blue: hsl(220, 90%, 20%);
-$lighter-blue: hsl(220, 70%, 45%);
-$dark-blue-green: hsl(200, 80%, 18%);
-$aqua-blue: hsla(200, 70%, 30%, 0.967);
-$green: hsl(170, 70%, 20%);
-$light-sea-green: hsl(180, 70%, 70%);
+$ocean-blue: #285185;
+$blue-green: #236477;
+$lighter-green: #46af98;
+$green: #3c8071;
+$light-blue-gray: #accefc;
 
 body {
     background-color: $ocean-blue;
+    color: white;
 }
 
 navbar {
-    background-color: $aqua-blue;
+    background-color: $green;
 
     a:link, a:visited {
-        color: $light-sea-green;
+        color: $light-blue-gray;
     }
 
     a:hover, a:active {
         color: white;
-        background-color: $dark-blue-green;
+        background-color: $lighter-green;
     }
 }
 
 .workplace {
     display: grid;
-    grid-template-columns: 1fr 20px;
+    grid-template-columns: 1fr 0.5fr 20px;
     align-items: center;
     padding: 10px;
     font-size: 20px;
-    background-color: $dark-blue-green;
-    border: 1px solid midnightblue;
+    background-color: $green;
+    border: 1px solid $green;
 }
 
 .more-info {
-    background-color: $lighter-blue;
-    border-color: darkblue;
+    background-color: $blue-green;
+    border-color: $green;
     border-style: solid;
     border-width: 0px 1px 1px 1px;
 }
@@ -47,12 +47,31 @@ navbar {
 
 .shown-info {
     display: grid;
-    grid-template-columns: 2fr 1fr;
+    grid-template-columns: 1fr 0.5fr;
     align-items: center;
 }
 
 .dates {
-    justify-self: end;
+    justify-self: start;
+}
+
+.expand-all-experience {
+    background-color: $blue-green;
+    color: $light-blue-gray;
+    border: 1px solid $green;
+    border-radius: 3px;
+    padding: 5px;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    margin: auto;
+    transition: 0.3s linear; 
+}
+
+.expand-all-experience:hover {
+    color: white; 
+    background-color: $green;
+    transition: 0.3s linear;
 }
 
 /*==========================
@@ -61,7 +80,7 @@ navbar {
 
 footer {
     a {
-        color: $light-sea-green;
+        color: $light-blue-gray;
         
         &:hover, &:active {
             color: $green;
@@ -71,7 +90,7 @@ footer {
 
 #replit-logo {
     .cls-2, .cls-3 {
-      fill: $light-sea-green;
+      fill: $light-blue-gray;
       transition: color 0.4s ease-in;
     }
     
@@ -85,7 +104,7 @@ footer {
   
 #codepen-logo {
     .outer-ring, .inner-box {
-        fill: $light-sea-green;
+        fill: $light-blue-gray;
         transition: color 0.4s ease-in;
     }
 

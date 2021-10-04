@@ -6,28 +6,44 @@ $(document).ready(function() {
         $(this).toggleClass("rotate-expander");
     });
 
-    // Add click event for the div expanders on the projects page
+    // Constants for next two listener events
+    const expandText = "Expand All";
+    const collapseText = "Collapse All";
 
+    // Add click event for the div expanders on the projects page
     $(".expand-all-projects").on("click", function() {
         
-        const expandText = "Expand All";
-        const collapseText = "Collapse All";
         var text = $(this).text();
         //console.log(text);
         
         // Toggle the text in the button and rotate all div expanders
         if (text.includes(expandText)) {
-            $(".expand-all-projects").text(collapseText);
-            $(".hidden-info").slideDown();
-            $(".grid-expander").addClass("rotate-expander");
+            $(this).text(collapseText);
+
+            var currentDivGrid = $(this).parents("h4").next();
+            currentDivGrid.find(".hidden-info").slideDown();
+            currentDivGrid.find(".grid-expander").addClass("rotate-expander");
         }
         
         if (text.includes(collapseText)) {
-            $(".expand-all-projects").text(expandText);
-            $(".hidden-info").slideUp();
-            $(".grid-expander").removeClass("rotate-expander");
+            $(this).text(expandText);
+            
+            var currentDivGrid = $(this).parents("h4").next();
+            currentDivGrid.find(".hidden-info").slideUp();
+            currentDivGrid.find(".grid-expander").removeClass("rotate-expander");
         }
         
+    });
+
+    // Add click event for the div expanders on the experience page
+    $(".expand-all-experience").on("click", function() {
+        var text = $(this).text();
+
+        //console.log(text);
+
+        $(this).text(text.includes(expandText) ? collapseText : expandText);
+        $(".hidden-info").slideToggle(300);
+        $(".grid-expander").addClass("rotate-expander");
     });
 
 });

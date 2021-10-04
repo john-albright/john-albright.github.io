@@ -54,6 +54,11 @@ navbar a:hover, navbar a:active {
 .div-grid {
   margin: 20px 15%;
 }
+@media only screen and (max-width: 992px) {
+  .div-grid {
+    margin: 20px 5%;
+  }
+}
 
 .grid-unit {
   margin-top: 30px;
@@ -66,10 +71,6 @@ navbar a:hover, navbar a:active {
   cursor: pointer;
   transform: rotate(0deg);
   transition: 0.4s;
-}
-
-.dates {
-  justify-self: end;
 }
 
 .more-info {
