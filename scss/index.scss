@@ -14,6 +14,29 @@ $purple-silver: rgb(80, 50, 100);
 $light-blue: rgb(100, 100, 200, 0.7);
 $burple: rgb(50, 50, 130, 0.967);
 
+// Responsive Style Variables
+$small-mobile: 350px;
+$mobile: 600px;
+$laptop: 992px;
+
+@mixin xs-screen {
+  @media only screen and (max-width: $small-mobile) {
+    @content;
+  }
+}
+
+@mixin sm-screen {
+  @media only screen and (max-width: $mobile) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media only screen and (max-width: $laptop) {
+    @content; 
+  }
+}
+
 /*============
   GENERAL BODY STYLES 
 ==============*/
@@ -24,7 +47,7 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
-h2, h3, h4, h5 {
+h3, h4, h5 {
   padding: 10px 20px;
 }
 
@@ -52,7 +75,17 @@ p {
   background-color: $purple-red-transparent;
   font-size: 22px;
   font-weight: 900;
-  //border: solid 1px black;
+  
+  @include sm-screen {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100px;
+    padding-left: 40px;
+  }
+
+  @include xs-screen {
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
   
   ul {
     padding: 0px 10px;
@@ -61,7 +94,15 @@ p {
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
     align-items: center;
-    //border: 3px solid purple;
+
+    @include sm-screen {
+      display: none;
+      background-color: $purple-red-transparent;
+      grid-template-columns: 1fr;
+      position: absolute;
+      margin-top: 280px; 
+      width: 100%; 
+    }
 
     a {
       text-decoration: none;
@@ -83,7 +124,6 @@ p {
       line-height: 30px;
       padding: 10px;
       text-align: center;
-      //border: 1px solid white;
     }
 
   } // end of <ul> styles
@@ -95,8 +135,8 @@ p {
 ==============*/
 
 #sub-navbar {
-  position: fixed;
   display: none;
+  position: fixed;
   grid-template-columns: 1fr;
   align-items: center;
   margin-top: 65px;
@@ -106,6 +146,12 @@ p {
   background-color: $burple;
   font-size: 22px;
   font-weight: 900;
+
+  @include sm-screen {
+    margin-top: 100px;
+    height: 150px;
+    padding: 0px;
+  }
   
   ul {
     height: 65px;
@@ -115,10 +161,19 @@ p {
     grid-column-gap: 10px;
     align-items: center;
 
+    @include sm-screen {
+      grid-template-columns: 1fr;
+      padding: 0px;
+    }
+
     li {
       list-style-type: none;
       text-align: center;
       padding: 5px 0px;
+
+      @include sm-screen {
+        padding: 0px;
+      }
     }
 
     a {
@@ -157,6 +212,10 @@ p {
       line-height: 1.5em;
       text-align: center;
       padding-top: 120px;
+
+      @include sm-screen {
+        font-size: 1.5em;
+      }
    }
   
    p {
@@ -211,6 +270,12 @@ p {
   .project-block {
     float: none;
     display: inline-block;
+
+    @include sm-screen {
+      width: 500px;
+    }
+
+
   }
 }
 
@@ -221,6 +286,18 @@ p {
   grid-column-gap: 30px;
   grid-row-gap: 50px;
   padding: 30px 2px;
+
+  @include laptop {
+    width: 95%;
+    margin: auto;
+  }
+
+  @include sm-screen {
+    width: 100%;
+    padding: 0px 0px 10px 0px; 
+    display: table;
+  }
+
 }
 
 .project-block {
@@ -229,10 +306,20 @@ p {
   background-color: $purple-blue-transparent;
   border: 3px solid $light-purple;
   border-radius: 3px;
-  margin: auto;
-  
+  text-align: center;
+  margin: auto; 
+
+  @include laptop {
+    width: 85%;
+    height: 100%;
+  }
+
+  @include sm-screen {
+    width: 100%;
+    margin-bottom: 30px;
+  }
+
   div {
-    //border: 1px solid black;
     padding: 3px; 
     text-align: center;
   }
@@ -244,6 +331,20 @@ p {
   margin: 3px;
   border: 2px solid $light-purple;
   border-radius: 3px;
+
+  @include laptop {
+    width: 90%; 
+    height: 70%;
+  }
+
+  @include sm-screen {
+    width: 100%;
+    height: 72%;
+  }
+
+  @include xs-screen {
+    margin: 0;
+  }
 }
 
 .project-title {
@@ -256,6 +357,10 @@ p {
 
 .project-tv-link {
   font-size: 30px;
+}
+
+.project-bookmark-link {
+  font-size: 18px;
 }
 
 #project-background-image {
@@ -288,6 +393,14 @@ p {
     margin: 0px 10%;
     border-radius: 2px;
     box-shadow: 1px 1px 10px darkslateblue;
+
+    @include sm-screen {
+      margin: 0px 5px;
+    }
+
+    @include xs-screen {
+      text-indent: 0%;
+    }
   }
   
   li {
@@ -301,6 +414,11 @@ p {
 
 .education-entry {
   margin: 20px 15%;
+
+  @include laptop {
+    width: 94%;
+    margin: 20px auto;
+  }
 }
 
 .school-info {
@@ -318,10 +436,19 @@ p {
   padding: 10px;
   background-color: $purple-red-transparent;
   border: 1px solid indigo;
+
+  @include sm-screen {
+    grid-template-columns: 1fr 60px;
+    font-size: 15px;
+  }
 }
 
 #degree-to-translate {
   grid-template-columns: 5fr 1fr 20px;
+
+  @include sm-screen {
+    grid-template-columns: 1fr 0.5fr 60px;
+  }
 }
 
 .school {
@@ -333,12 +460,10 @@ p {
 .institution {
   color: lightsteelblue;
   font-style: italic;
-  //border: 1px solid black;
 }
 
 .dates {
   justify-self: end;
-  //border: 1px solid black;
 }
 
 .other-details {
@@ -354,12 +479,12 @@ p {
   padding: 6px;
   margin-right: 10px;
   border: 1px solid indigo;
-  transition: border 0.4s ease-in;
+  transition: border 0.3s ease-in;
 }
 
 .expand-all-btn:hover {
   border: 1px magenta solid;
-  transition: 0.4s ease-in;
+  transition: 0.3s ease-in;
 }
 
 #translate-course {
@@ -370,33 +495,53 @@ p {
   width: 70px;
   margin-right: 10px;
   cursor: pointer;
+
+  @include sm-screen {
+    justify-self: end;
+    margin-right: 0px;
+  }
 }
 
-/*============
+/*====================
   DIV EXPANDER STYLES 
-==============*/
+=====================*/
 
 #navbar-menu-expander {
   display: none;
-  width: 25px;
-  height: 40px;
-  font-size: 40px;
-  line-height: 40px;
-  cursor: pointer;
   color: magenta;
-  transition: 0.3s linear;
+
+  @include sm-screen {
+    display: grid; 
+  }
+
+  @include xs-screen {
+    justify-self: end;
+  }
 }
 
 #navbar-submenu-expander {
+  margin-left: 20px;
+  color: $light-blue;
+
+  @include xs-screen {
+    justify-self: start;
+  }
+}
+
+#navbar-submenu-expander, #navbar-menu-expander {
   width: 25px;
   height: 40px;
-  //display: inline-block;
   font-size: 40px;
   line-height: 40px;
-  margin-left: 20px;
   cursor: pointer;
-  color: magenta;
   transition: 0.3s linear;
+
+  @include sm-screen {
+    width: 55px;
+    height: 50px;
+    font-size: 80px;
+    margin-left: 20px;
+  }
 }
 
 .div-expander {
@@ -406,12 +551,26 @@ p {
   cursor: pointer;
   color: magenta;
   transition: 0.3s linear;
+
+  @include sm-screen {
+    height: 80px;
+    width: 50px;
+    font-size: 50px;
+    text-align: center;
+    margin-right: 30px; 
+    padding: 0px; 
+  }
 }
 
-.div-expander:hover, #navbar-submenu-expander:hover, 
+.div-expander:hover, 
 #navbar-menu-expander:hover, 
-#this-page-links:hover, #other-pages-links:hover {
+#this-page-links:hover {
   color: $light-maroon;
+  transition: 0.3s linear;
+}
+
+#navbar-submenu-expander:hover, #other-pages-links:hover {
+  color: $purple-silver;
   transition: 0.3s linear;
 }
 
@@ -419,10 +578,28 @@ p {
   transform: rotate(-45deg);
 }
 
+#other-pages-links {
+  color: $light-blue;
+}
+
+#this-page-links {
+  color: magenta; 
+}
+
 #this-page-links, #other-pages-links {
   display: none;
   cursor: pointer;
-  color: magenta;
+
+  @include sm-screen {
+    display: grid;
+    font-size: 1em;
+    justify-self: end; 
+  }
+
+  @include xs-screen {
+    display: none;
+  }
+
 }
 
 /*============
@@ -535,221 +712,3 @@ footer {
     }
   }
 }
-
-/*******************
-  Old technique to create hover effect for CodePen.io and Replit svg files: using filters for replit and codepen svg files generated partially by using 
-  Barret Sonntag's CSS filter generator found at 
-  https://codepen.io/sosuke/pen/Pjoqqp
-
-.codepen-link:link, .codepen-link:visited {
-  filter: invert(85%) sepia(100%) saturate(3000%) hue-rotate(281deg) brightness(90%) contrast(96%);
-}
-
-.replit-link:link, .replit-link:visited {
-  filter: invert(60%) sepia(100%) saturate(1500%) hue-rotate(281deg) brightness(200%) contrast(96%);
-}
-
-.codepen-link:hover, .codepen-link:active {
-  filter: brightness(15%);
-  transition : 1s;
-}
-
-.replit-link:hover, #replit-link:active {
-  filter: brightness(5%);
-  transition : 1s;
-}
-  
-************/
-
-/*==========================
-  RESPONSIVE STYLES: MOBILE 
-============================*/
-
-@media only screen and (max-width: 480px) {
-
-  h3, h4, h5 {
-    font-size: 35px;
-  }
-  
-  h1, h2 {
-    font-size: 50px;
-  }
-
-  #welcome-section {
-    h1 {
-      font-size: 30px;
-    }
-  }
-
-  #navbar {
-    height: 65px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding-left: 40px;
-
-    ul {
-      background-color: $purple-red-transparent;
-      display: none;
-      position: absolute;
-      margin-top: 260px;
-      width: 100%;
-      grid-template-columns: 1fr;
-    }
-  }
-
-  #navbar-menu-expander {
-    display: grid;
-  }
-
-  #navbar-submenu-expander, #navbar-menu-expander {
-    margin-left: 20px;
-    height: 40px;
-    width: 30px;
-    font-size: 50px;
-    //border: 1px solid black;
-  }
-
-  #this-page-links, #other-pages-links {
-    display: grid;
-    justify-self: end;
-  }
-
-  #sub-navbar {
-    margin-top: 65px;
-  }
-
-  .education-entry {
-    width: 94%;
-    margin: 20px auto;
-  }
-
-  .degree {
-    grid-template-columns: 1fr 50px;
-    font-size: 25px;
-  }
-
-  .school-info {
-    font-size: 20px;
-  }
-
-  .school {
-    grid-template-columns: 1fr;
-  }
-
-  .dates {
-    justify-self: start;
-  }
-
-  .projects-grid {
-    width: 95%; 
-    margin: auto;
-    //border: 1px solid white;
-  }
-
-  .project-block {
-    width: 75%;
-    height: 105%;
-    margin: 0px 0px 0px 1%;
-    border: 1px solid black;
-  }
-
-  .project-image {
-    width: 99%;
-  }
-
-  .projects-overflow {
-    height: 550px;
-
-    .project-block {
-      width: 450px;
-    }
-  }
-
-  #degree-to-translate {
-    grid-template-columns: 1fr 0.5fr 50px;
-  }
-
-  #translate-course {
-    justify-self: center;
-  }
-
-  .div-expander {
-    height: 80px;
-    width: 50px;
-    font-size: 50px;
-    text-align: center;
-    margin-right: 30px;
-    padding: 0px;
-  }
-
-} // end of small screen media queries
-
-/*==========================
-  TABLET STYLES 
-============================*/
-
-@media only screen and (min-width: 481px) {
-
-
-}
-
-/*==========================
-  DESKTOP STYLES 
-============================*/
-
-@media only screen and (min-width: 481px) {
-
-
-}
-
-/*==========================
-  LARGE SCREEN STYLES 
-============================*/
-/*
-@media only screen and (min-width: 1132px) {
-  .projects-overflow {
-    height: 600px;
-    padding: 15px;
-    margin: 10px auto;
-  }
-  
-  .project-block {
-    height: 562px; // 1.5 times larger & rounded up
-    width: 688px;  // 1.5 times larger & rounded up
-  }
-  
-  .project-image {
-    height: 375px; // 1.5 times larger
-    width: 675px; // 1.5 times larger
-    display: inline-block;
-    margin: 2px 4px;
-  }
-
-  .project-title {
-    font-size: 45px;
-  }
-
-  .project-description {
-    font-size: 25px;
-  }
-
-  .project-tv-link {
-    font-size: 35px;
-  }
-
-  .project-github-link {
-    font-size: 40px;
-  }
-
-  #c-sharp-project {
-    .project-github-link {
-      transform: translateY(-3px);
-    }
-  }
-
-  .education-entry {
-    width: 80%;
-    margin: 20px auto;
-  }
-} // end of medium screen media queries
-
-*/

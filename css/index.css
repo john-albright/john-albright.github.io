@@ -9,7 +9,7 @@ body {
   font-family: Montserrat, sans-serif;
 }
 
-h2, h3, h4, h5 {
+h3, h4, h5 {
   padding: 10px 20px;
 }
 
@@ -37,6 +37,19 @@ p {
   font-size: 22px;
   font-weight: 900;
 }
+@media only screen and (max-width: 600px) {
+  #navbar {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    height: 100px;
+    padding-left: 40px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #navbar {
+    grid-template-columns: 1fr 1fr;
+    padding: 0;
+  }
+}
 #navbar ul {
   padding: 0px 10px;
   margin: 0px;
@@ -44,6 +57,16 @@ p {
   grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 10px;
   align-items: center;
+}
+@media only screen and (max-width: 600px) {
+  #navbar ul {
+    display: none;
+    background-color: rgba(50, 0, 40, 0.967);
+    grid-template-columns: 1fr;
+    position: absolute;
+    margin-top: 280px;
+    width: 100%;
+  }
 }
 #navbar ul a {
   text-decoration: none;
@@ -68,8 +91,8 @@ p {
   SUB-NAVBAR STYLES 
 ==============*/
 #sub-navbar {
-  position: fixed;
   display: none;
+  position: fixed;
   grid-template-columns: 1fr;
   align-items: center;
   margin-top: 65px;
@@ -80,6 +103,13 @@ p {
   font-size: 22px;
   font-weight: 900;
 }
+@media only screen and (max-width: 600px) {
+  #sub-navbar {
+    margin-top: 100px;
+    height: 150px;
+    padding: 0px;
+  }
+}
 #sub-navbar ul {
   height: 65px;
   display: grid;
@@ -88,10 +118,21 @@ p {
   grid-column-gap: 10px;
   align-items: center;
 }
+@media only screen and (max-width: 600px) {
+  #sub-navbar ul {
+    grid-template-columns: 1fr;
+    padding: 0px;
+  }
+}
 #sub-navbar ul li {
   list-style-type: none;
   text-align: center;
   padding: 5px 0px;
+}
+@media only screen and (max-width: 600px) {
+  #sub-navbar ul li {
+    padding: 0px;
+  }
 }
 #sub-navbar ul a {
   text-decoration: none;
@@ -120,6 +161,11 @@ p {
   line-height: 1.5em;
   text-align: center;
   padding-top: 120px;
+}
+@media only screen and (max-width: 600px) {
+  #welcome-section h1 {
+    font-size: 1.5em;
+  }
 }
 #welcome-section p {
   padding: 10px 0px;
@@ -168,6 +214,11 @@ p {
   float: none;
   display: inline-block;
 }
+@media only screen and (max-width: 600px) {
+  .projects-overflow .project-block {
+    width: 500px;
+  }
+}
 
 .projects-grid {
   width: 100%;
@@ -177,6 +228,19 @@ p {
   grid-row-gap: 50px;
   padding: 30px 2px;
 }
+@media only screen and (max-width: 992px) {
+  .projects-grid {
+    width: 95%;
+    margin: auto;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .projects-grid {
+    width: 100%;
+    padding: 0px 0px 10px 0px;
+    display: table;
+  }
+}
 
 .project-block {
   height: 450px;
@@ -184,7 +248,20 @@ p {
   background-color: rgba(40, 0, 50, 0.5);
   border: 3px solid rgba(100, 50, 180, 0.5);
   border-radius: 3px;
+  text-align: center;
   margin: auto;
+}
+@media only screen and (max-width: 992px) {
+  .project-block {
+    width: 85%;
+    height: 100%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .project-block {
+    width: 100%;
+    margin-bottom: 30px;
+  }
 }
 .project-block div {
   padding: 3px;
@@ -198,6 +275,23 @@ p {
   border: 2px solid rgba(100, 50, 180, 0.5);
   border-radius: 3px;
 }
+@media only screen and (max-width: 992px) {
+  .project-image {
+    width: 90%;
+    height: 70%;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .project-image {
+    width: 100%;
+    height: 72%;
+  }
+}
+@media only screen and (max-width: 350px) {
+  .project-image {
+    margin: 0;
+  }
+}
 
 .project-title {
   font-size: 30px;
@@ -209,6 +303,10 @@ p {
 
 .project-tv-link {
   font-size: 30px;
+}
+
+.project-bookmark-link {
+  font-size: 18px;
 }
 
 #project-background-image {
@@ -237,6 +335,16 @@ p {
   border-radius: 2px;
   box-shadow: 1px 1px 10px darkslateblue;
 }
+@media only screen and (max-width: 600px) {
+  #education h4 {
+    margin: 0px 5px;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #education h4 {
+    text-indent: 0%;
+  }
+}
 #education li {
   list-style-type: square;
 }
@@ -246,6 +354,12 @@ p {
 
 .education-entry {
   margin: 20px 15%;
+}
+@media only screen and (max-width: 992px) {
+  .education-entry {
+    width: 94%;
+    margin: 20px auto;
+  }
 }
 
 .school-info {
@@ -264,9 +378,20 @@ p {
   background-color: rgba(50, 0, 40, 0.967);
   border: 1px solid indigo;
 }
+@media only screen and (max-width: 600px) {
+  .degree {
+    grid-template-columns: 1fr 60px;
+    font-size: 15px;
+  }
+}
 
 #degree-to-translate {
   grid-template-columns: 5fr 1fr 20px;
+}
+@media only screen and (max-width: 600px) {
+  #degree-to-translate {
+    grid-template-columns: 1fr 0.5fr 60px;
+  }
 }
 
 .school {
@@ -297,12 +422,12 @@ p {
   padding: 6px;
   margin-right: 10px;
   border: 1px solid indigo;
-  transition: border 0.4s ease-in;
+  transition: border 0.3s ease-in;
 }
 
 .expand-all-btn:hover {
   border: 1px magenta solid;
-  transition: 0.4s ease-in;
+  transition: 0.3s ease-in;
 }
 
 #translate-course {
@@ -314,30 +439,56 @@ p {
   margin-right: 10px;
   cursor: pointer;
 }
+@media only screen and (max-width: 600px) {
+  #translate-course {
+    justify-self: end;
+    margin-right: 0px;
+  }
+}
 
-/*============
+/*====================
   DIV EXPANDER STYLES 
-==============*/
+=====================*/
 #navbar-menu-expander {
   display: none;
-  width: 25px;
-  height: 40px;
-  font-size: 40px;
-  line-height: 40px;
-  cursor: pointer;
   color: magenta;
-  transition: 0.3s linear;
+}
+@media only screen and (max-width: 600px) {
+  #navbar-menu-expander {
+    display: grid;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #navbar-menu-expander {
+    justify-self: end;
+  }
 }
 
 #navbar-submenu-expander {
+  margin-left: 20px;
+  color: rgba(100, 100, 200, 0.7);
+}
+@media only screen and (max-width: 350px) {
+  #navbar-submenu-expander {
+    justify-self: start;
+  }
+}
+
+#navbar-submenu-expander, #navbar-menu-expander {
   width: 25px;
   height: 40px;
   font-size: 40px;
   line-height: 40px;
-  margin-left: 20px;
   cursor: pointer;
-  color: magenta;
   transition: 0.3s linear;
+}
+@media only screen and (max-width: 600px) {
+  #navbar-submenu-expander, #navbar-menu-expander {
+    width: 55px;
+    height: 50px;
+    font-size: 80px;
+    margin-left: 20px;
+  }
 }
 
 .div-expander {
@@ -348,11 +499,26 @@ p {
   color: magenta;
   transition: 0.3s linear;
 }
+@media only screen and (max-width: 600px) {
+  .div-expander {
+    height: 80px;
+    width: 50px;
+    font-size: 50px;
+    text-align: center;
+    margin-right: 30px;
+    padding: 0px;
+  }
+}
 
-.div-expander:hover, #navbar-submenu-expander:hover,
+.div-expander:hover,
 #navbar-menu-expander:hover,
-#this-page-links:hover, #other-pages-links:hover {
+#this-page-links:hover {
   color: #640037;
+  transition: 0.3s linear;
+}
+
+#navbar-submenu-expander:hover, #other-pages-links:hover {
+  color: #503264;
   transition: 0.3s linear;
 }
 
@@ -360,10 +526,29 @@ p {
   transform: rotate(-45deg);
 }
 
+#other-pages-links {
+  color: rgba(100, 100, 200, 0.7);
+}
+
+#this-page-links {
+  color: magenta;
+}
+
 #this-page-links, #other-pages-links {
   display: none;
   cursor: pointer;
-  color: magenta;
+}
+@media only screen and (max-width: 600px) {
+  #this-page-links, #other-pages-links {
+    display: grid;
+    font-size: 1em;
+    justify-self: end;
+  }
+}
+@media only screen and (max-width: 350px) {
+  #this-page-links, #other-pages-links {
+    display: none;
+  }
 }
 
 /*============
@@ -446,200 +631,5 @@ footer a:hover, footer a:active {
 #codepen-logo:hover .outer-ring, #codepen-logo:hover .inner-box {
   fill: rgba(50, 0, 40, 0.967);
 }
-
-/*******************
-  Old technique to create hover effect for CodePen.io and Replit svg files: using filters for replit and codepen svg files generated partially by using 
-  Barret Sonntag's CSS filter generator found at 
-  https://codepen.io/sosuke/pen/Pjoqqp
-
-.codepen-link:link, .codepen-link:visited {
-  filter: invert(85%) sepia(100%) saturate(3000%) hue-rotate(281deg) brightness(90%) contrast(96%);
-}
-
-.replit-link:link, .replit-link:visited {
-  filter: invert(60%) sepia(100%) saturate(1500%) hue-rotate(281deg) brightness(200%) contrast(96%);
-}
-
-.codepen-link:hover, .codepen-link:active {
-  filter: brightness(15%);
-  transition : 1s;
-}
-
-.replit-link:hover, #replit-link:active {
-  filter: brightness(5%);
-  transition : 1s;
-}
-
-************/
-/*==========================
-  RESPONSIVE STYLES: MOBILE 
-============================*/
-@media only screen and (max-width: 480px) {
-  h3, h4, h5 {
-    font-size: 35px;
-  }
-
-  h1, h2 {
-    font-size: 50px;
-  }
-
-  #welcome-section h1 {
-    font-size: 30px;
-  }
-
-  #navbar {
-    height: 65px;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
-    padding-left: 40px;
-  }
-  #navbar ul {
-    background-color: rgba(50, 0, 40, 0.967);
-    display: none;
-    position: absolute;
-    margin-top: 260px;
-    width: 100%;
-    grid-template-columns: 1fr;
-  }
-
-  #navbar-menu-expander {
-    display: grid;
-  }
-
-  #navbar-submenu-expander, #navbar-menu-expander {
-    margin-left: 20px;
-    height: 40px;
-    width: 30px;
-    font-size: 50px;
-  }
-
-  #this-page-links, #other-pages-links {
-    display: grid;
-    justify-self: end;
-  }
-
-  #sub-navbar {
-    margin-top: 65px;
-  }
-
-  .education-entry {
-    width: 94%;
-    margin: 20px auto;
-  }
-
-  .degree {
-    grid-template-columns: 1fr 50px;
-    font-size: 25px;
-  }
-
-  .school-info {
-    font-size: 20px;
-  }
-
-  .school {
-    grid-template-columns: 1fr;
-  }
-
-  .dates {
-    justify-self: start;
-  }
-
-  .projects-grid {
-    width: 95%;
-    margin: auto;
-  }
-
-  .project-block {
-    width: 75%;
-    height: 105%;
-    margin: 0px 0px 0px 1%;
-    border: 1px solid black;
-  }
-
-  .project-image {
-    width: 99%;
-  }
-
-  .projects-overflow {
-    height: 550px;
-  }
-  .projects-overflow .project-block {
-    width: 450px;
-  }
-
-  #degree-to-translate {
-    grid-template-columns: 1fr 0.5fr 50px;
-  }
-
-  #translate-course {
-    justify-self: center;
-  }
-
-  .div-expander {
-    height: 80px;
-    width: 50px;
-    font-size: 50px;
-    text-align: center;
-    margin-right: 30px;
-    padding: 0px;
-  }
-}
-/*==========================
-  TABLET STYLES 
-============================*/
-/*==========================
-  DESKTOP STYLES 
-============================*/
-/*==========================
-  LARGE SCREEN STYLES 
-============================*/
-/*
-@media only screen and (min-width: 1132px) {
-  .projects-overflow {
-    height: 600px;
-    padding: 15px;
-    margin: 10px auto;
-  }
-
-  .project-block {
-    height: 562px; // 1.5 times larger & rounded up
-    width: 688px;  // 1.5 times larger & rounded up
-  }
-
-  .project-image {
-    height: 375px; // 1.5 times larger
-    width: 675px; // 1.5 times larger
-    display: inline-block;
-    margin: 2px 4px;
-  }
-
-  .project-title {
-    font-size: 45px;
-  }
-
-  .project-description {
-    font-size: 25px;
-  }
-
-  .project-tv-link {
-    font-size: 35px;
-  }
-
-  .project-github-link {
-    font-size: 40px;
-  }
-
-  #c-sharp-project {
-    .project-github-link {
-      transform: translateY(-3px);
-    }
-  }
-
-  .education-entry {
-    width: 80%;
-    margin: 20px auto;
-  }
-} // end of medium screen media queries
-
-*/
 
 /*# sourceMappingURL=index.css.map */

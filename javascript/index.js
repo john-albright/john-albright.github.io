@@ -40,9 +40,6 @@ $(document).ready(function() {
     }
   });
   
-  // Add a Bootstrap class
-  $(".expand-all-btn").addClass("float-right");
-  
   // Reveal the hidden content of each education-entry div
   $(".div-expander").on('click', expandOneDiv);
   
