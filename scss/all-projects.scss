@@ -3,8 +3,16 @@ $dark-maroon: hsl(300, 90%, 18%);
 $dark-pink: hsl(300, 70%, 30%);
 $dark-purple: hsl(270, 80%, 20%);
 $pink-purple: hsla(280, 70%, 30%, 0.967);
-$purplish-blue: hsl(250, 70%, 40%);
+$purplish-blue: hsl(250, 50%, 40%);
 $cotton-candy: hsl(280, 70%, 80%);
+
+// Mix-in
+$laptop: 992px;
+@mixin md-screen {
+    @media only screen and (max-width: $laptop) {
+      @content; 
+    }
+}
 
 body {
     background-color: $dark-maroon;
@@ -31,6 +39,11 @@ navbar {
     font-size: 20px;
     background-color: $dark-purple;
     border: 1px solid indigo;
+}
+
+.project-type {
+    padding: 5px;
+    width: 50%;
 }
 
 .more-info {
@@ -66,6 +79,10 @@ main {
         margin: 0px 10%;
         border-radius: 2px;
         box-shadow: 1px 1px 10px darkslateblue;
+
+        @include md-screen {
+            margin: 0px 3%;
+        }
     }
 }
 
@@ -74,8 +91,9 @@ main {
     margin: auto 15px auto auto;
     padding: 5px;
     color: $cotton-candy;
-    background-color: $purplish-blue;
+    background-color: $dark-purple;
     border: 1px solid indigo;
+    border-radius: 3px;
     transition: 0.4s linear;
 }
 

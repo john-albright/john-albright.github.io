@@ -25,7 +25,9 @@ $(document).ready(function() {
    * Idea for function below taken from JxAxMxIxN's response 
    * to the StackOverflow discussion at the link:    
    * https://stackoverflow.com/questions/2155453/jquery-toggle-text 
+   * 
    */ 
+
   $.fn.extend({
     toggleHTML: function(a, b) {
       if (this.html().includes(a)) {
@@ -67,6 +69,11 @@ $(document).ready(function() {
     toggleSubNavBar(400);
   });
 
+  // Link the all projects page to the all projects button on the home page
+  $("#all-projects-button").on("click", function() {
+    document.location.href = "pages/all-projects.html";
+  });
+
   // Reveal the navbar unordered list when the navbar-menu-expander is clicked
   $("#navbar-menu-expander, #this-page-links").on("click", function() {
     if ($("#sub-navbar").is(":visible")) {
@@ -91,13 +98,15 @@ $(document).ready(function() {
   // Operations to perform when the window is resized
   $(window).on("resize", function() {
     changeProjectImageHeight();
-
+    
+    /* Code to show ul in case it gets hidden
     var width = $(window).width();
-
+    
     if (width > 600 && !$("#navbar > ul").is(":visible")) {
       $("#navbar > ul").show();
       $("#navbar-menu-expander").css("transform", "rotate(0deg)");
-    }
+    }*/
+
   });
   
   // Change the height of the img in the projects section to match the size of the div

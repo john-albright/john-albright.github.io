@@ -210,13 +210,25 @@ p {
   overflow-x: scroll;
   overflow-y: hidden;
 }
+@media only screen and (max-width: 600px) {
+  .projects-overflow {
+    padding: 20px;
+  }
+}
 .projects-overflow .project-block {
   float: none;
   display: inline-block;
 }
+@media only screen and (max-width: 992px) {
+  .projects-overflow .project-block {
+    height: 70vh;
+  }
+}
 @media only screen and (max-width: 600px) {
   .projects-overflow .project-block {
     width: 500px;
+    height: 73vh;
+    margin: 0px;
   }
 }
 
@@ -330,6 +342,23 @@ p {
   margin-top: 7px;
 }
 
+#all-projects-button {
+  font-size: 20px;
+  color: ghostwhite;
+  background-color: #640037;
+  border: rgba(40, 0, 50, 0.5);
+  border-radius: 3px;
+  margin: 30px auto;
+  transition: 0.3s ease-in;
+  padding: 10px;
+  transition: 0.3 ease-in;
+}
+
+#all-projects-button:hover {
+  background-color: rgba(100, 50, 180, 0.5);
+  transition: 0.3s ease-in;
+}
+
 /*============
   EDUCATION STYLES 
 ==============*/
@@ -427,6 +456,7 @@ p {
   padding: 6px;
   margin-right: 10px;
   border: 1px solid indigo;
+  border-radius: 3px;
   transition: border 0.3s ease-in;
 }
 
@@ -523,7 +553,7 @@ p {
 }
 
 #navbar-submenu-expander:hover, #other-pages-links:hover {
-  color: #503264;
+  color: rgba(50, 50, 130, 0.967);
   transition: 0.3s linear;
 }
 
