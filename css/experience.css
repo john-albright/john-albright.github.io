@@ -4,7 +4,7 @@ body {
 }
 
 navbar {
-  background-color: #3c8071;
+  background-color: rgba(60, 128, 133, 0.967);
 }
 navbar a:link, navbar a:visited {
   color: #accefc;
@@ -20,13 +20,13 @@ navbar a:hover, navbar a:active {
   align-items: center;
   padding: 10px;
   font-size: 20px;
-  background-color: #3c8071;
-  border: 1px solid #3c8071;
+  background-color: rgba(60, 128, 133, 0.967);
+  border: 1px solid rgba(60, 128, 133, 0.967);
 }
 
 .more-info {
   background-color: #236477;
-  border-color: #3c8071;
+  border-color: rgba(60, 128, 133, 0.967);
   border-style: solid;
   border-width: 0px 1px 1px 1px;
 }
@@ -49,7 +49,7 @@ navbar a:hover, navbar a:active {
 .expand-all-experience {
   background-color: #236477;
   color: #accefc;
-  border: 1px solid #3c8071;
+  border: 1px solid rgba(60, 128, 133, 0.967);
   border-radius: 3px;
   padding: 5px;
   font-size: 20px;
@@ -61,7 +61,7 @@ navbar a:hover, navbar a:active {
 
 .expand-all-experience:hover {
   color: white;
-  background-color: #3c8071;
+  background-color: rgba(60, 128, 133, 0.967);
   transition: 0.3s linear;
 }
 
@@ -72,7 +72,7 @@ footer a {
   color: #accefc;
 }
 footer a:hover, footer a:active {
-  color: #3c8071;
+  color: rgba(60, 128, 133, 0.967);
 }
 
 #replit-logo .cls-2, #replit-logo .cls-3 {
@@ -80,7 +80,7 @@ footer a:hover, footer a:active {
   transition: color 0.4s ease-in;
 }
 #replit-logo:hover .cls-2, #replit-logo:hover .cls-3 {
-  fill: #3c8071;
+  fill: rgba(60, 128, 133, 0.967);
   transition: color 0.4s ease-in;
 }
 
@@ -89,7 +89,7 @@ footer a:hover, footer a:active {
   transition: color 0.4s ease-in;
 }
 #codepen-logo:hover .outer-ring, #codepen-logo:hover .inner-box {
-  fill: #3c8071;
+  fill: rgba(60, 128, 133, 0.967);
   transition: color 0.4s ease-in;
 }
 

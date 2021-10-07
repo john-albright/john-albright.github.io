@@ -65,6 +65,7 @@ p {
     grid-template-columns: 1fr;
     position: absolute;
     margin-top: 280px;
+    height: 240px;
     width: 100%;
   }
 }
@@ -106,22 +107,22 @@ p {
 @media only screen and (max-width: 600px) {
   #sub-navbar {
     margin-top: 100px;
-    height: 150px;
-    padding: 0px;
+    height: 240px;
+    padding: 5px;
   }
 }
 #sub-navbar ul {
-  height: 65px;
+  height: 100%;
   display: grid;
   padding: 0px 10px;
-  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr 1fr;
   grid-column-gap: 10px;
   align-items: center;
 }
 @media only screen and (max-width: 600px) {
   #sub-navbar ul {
     grid-template-columns: 1fr;
-    padding: 0px;
+    padding: 5px;
   }
 }
 #sub-navbar ul li {
@@ -131,7 +132,8 @@ p {
 }
 @media only screen and (max-width: 600px) {
   #sub-navbar ul li {
-    padding: 0px;
+    padding: 5px;
+    margin: 5px;
   }
 }
 #sub-navbar ul a {
@@ -196,6 +198,11 @@ p {
   border-radius: 2px;
   box-shadow: 1px 1px 10px darkslateblue;
   padding: 10px 0px;
+}
+@media only screen and (max-width: 600px) {
+  #projects h4 {
+    margin: 30px 3%;
+  }
 }
 
 .projects-overflow {
@@ -547,12 +554,12 @@ p {
 
 .div-expander:hover,
 #navbar-menu-expander:hover,
-#this-page-links:hover {
+#this-page-links:hover, .menu-hovered {
   color: #640037;
   transition: 0.3s linear;
 }
 
-#navbar-submenu-expander:hover, #other-pages-links:hover {
+#navbar-submenu-expander:hover, #other-pages-links:hover, .submenu-hovered {
   color: rgba(50, 50, 130, 0.967);
   transition: 0.3s linear;
 }
@@ -572,12 +579,14 @@ p {
 #this-page-links, #other-pages-links {
   display: none;
   cursor: pointer;
+  height: 40px;
 }
 @media only screen and (max-width: 600px) {
   #this-page-links, #other-pages-links {
     display: grid;
     font-size: 1em;
     justify-self: end;
+    align-content: start;
   }
 }
 @media only screen and (max-width: 350px) {

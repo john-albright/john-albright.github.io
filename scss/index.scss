@@ -101,6 +101,7 @@ p {
       grid-template-columns: 1fr;
       position: absolute;
       margin-top: 280px; 
+      height: 240px;
       width: 100%; 
     }
 
@@ -146,33 +147,39 @@ p {
   background-color: $burple;
   font-size: 22px;
   font-weight: 900;
+  //border: yellow solid 1px;
 
   @include sm-screen {
     margin-top: 100px;
-    height: 150px;
-    padding: 0px;
+    height: 240px;
+    padding: 5px;
   }
   
   ul {
-    height: 65px;
+    height: 100%;
     display: grid;
     padding: 0px 10px;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
     align-items: center;
+    //border: 1px solid white;
 
     @include sm-screen {
       grid-template-columns: 1fr;
-      padding: 0px;
+      padding: 5px;
+      //margin-top: auto;
+      //margin-bottom: auto;
     }
 
     li {
       list-style-type: none;
       text-align: center;
       padding: 5px 0px;
+      //border: black 4px solid;
 
       @include sm-screen {
-        padding: 0px;
+        padding: 5px;
+        margin: 5px;
       }
     }
 
@@ -252,6 +259,10 @@ p {
     border-radius: 2px;
     box-shadow: 1px 1px 10px darkslateblue;
     padding: 10px 0px;
+
+    @include sm-screen {
+      margin: 30px 3%;
+    }
   }
 }
 
@@ -594,12 +605,12 @@ p {
 
 .div-expander:hover, 
 #navbar-menu-expander:hover, 
-#this-page-links:hover {
+#this-page-links:hover, .menu-hovered {
   color: $light-maroon;
   transition: 0.3s linear;
 }
 
-#navbar-submenu-expander:hover, #other-pages-links:hover {
+#navbar-submenu-expander:hover, #other-pages-links:hover, .submenu-hovered {
   color: $burple;
   transition: 0.3s linear;
 }
@@ -619,11 +630,14 @@ p {
 #this-page-links, #other-pages-links {
   display: none;
   cursor: pointer;
+  //border: black 1px solid;
+  height: 40px;
 
   @include sm-screen {
     display: grid;
     font-size: 1em;
-    justify-self: end; 
+    justify-self: end;
+    align-content: start;
   }
 
   @include xs-screen {
