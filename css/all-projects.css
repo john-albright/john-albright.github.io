@@ -1,6 +1,12 @@
 body {
   background-color: #570557;
 }
+body a {
+  color: #330a5c;
+}
+body a:hover, body a:active {
+  color: rgba(94, 23, 130, 0.967);
+}
 
 navbar {
   background-color: rgba(94, 23, 130, 0.967);

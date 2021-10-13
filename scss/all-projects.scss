@@ -16,6 +16,14 @@ $laptop: 992px;
 
 body {
     background-color: $dark-maroon;
+
+    a {
+        color: $dark-purple;
+
+        &:hover, &:active {
+            color: $pink-purple;
+        }
+    }
 }
 
 navbar {
