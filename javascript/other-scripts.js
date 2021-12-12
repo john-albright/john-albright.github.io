@@ -1,14 +1,31 @@
 $(document).ready(function() {
 
-    // Add click event listener for the grid expander 
-    $(".grid-expander").on("click", function() {
-        $(this).parents(".grid-unit").find(".hidden-info").slideToggle(300);
-        $(this).toggleClass("rotate-expander");
-    });
-
-    // Constants for next two listener events
+    // Constants for event listeners
     const expandText = "Expand All";
     const collapseText = "Collapse All";
+
+    // Add click event listener for the grid expander 
+    $(".grid-expander").on("click", function() {
+        var hiddenInfo = $(this).parents(".grid-unit").find(".hidden-info");
+        hiddenInfo.slideToggle(300);
+        $(this).toggleClass("rotate-expander");
+
+        var allUnits = $(this).parents(".div-grid").find(".grid-unit");
+
+        // If every unit's grid-expander has the class rotate-expander, change the "Expand All" text to "Collapse All"
+        if ([...allUnits].every((div) => $(div).find(".grid-expander").hasClass("rotate-expander"))) {
+            $(this).parents(".div-grid").prev("h4").find(".expand-all-projects").text(collapseText);
+        }
+
+        // Print statement to check the status of each div in the group 
+        // [...allUnits].forEach((div, index) => console.log(`${index}: ${$(div).find(".grid-expander").hasClass("rotate-expander")}`));
+
+        // If every unit's grid-expander doesn't have the class rotate-expander, change the "Collapse All" text to "Expand All"
+        if ([...allUnits].every((div) => !$(div).find(".grid-expander").hasClass("rotate-expander"))) {
+            $(this).parents(".div-grid").prev("h4").find(".expand-all-projects").text(expandText);
+        }
+
+    });
 
     // Add click event for the div expanders on the projects page
     $(".expand-all-projects").on("click", function() {

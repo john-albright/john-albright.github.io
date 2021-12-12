@@ -96,21 +96,21 @@ footer a {
   color: #d8a8f0;
 }
 footer a:hover, footer a:active {
-  color: #443399;
+  color: #6653c6;
 }
 
 #replit-logo .cls-2, #replit-logo .cls-3 {
   fill: #d8a8f0;
 }
 #replit-logo:hover .cls-2, #replit-logo:hover .cls-3 {
-  fill: #443399;
+  fill: #6653c6;
 }
 
 #codepen-logo .outer-ring, #codepen-logo .inner-box {
   fill: #d8a8f0;
 }
 #codepen-logo:hover .outer-ring, #codepen-logo:hover .inner-box {
-  fill: #443399;
+  fill: #6653c6;
 }
 
 .project-link-icon {
@@ -119,7 +119,7 @@ footer a:hover, footer a:active {
 }
 .project-link-icon:hover {
   transition: 0.3 linear;
-  color: #443399;
+  color: #6653c6;
 }
 
 /*# sourceMappingURL=all-projects.css.map */

@@ -46,16 +46,48 @@ $(document).ready(function() {
   $(".div-expander").on('click', expandOneDiv);
   
   function expandOneDiv() {
-    $(this).parents(".education-entry").find(".other-details").slideToggle(300);
+    var educationEntry = $(this).parents(".education-entry");
+
+    educationEntry.find(".other-details").slideToggle(300);
     $(this).toggleClass("rotate-expander");
+
+    var heading = educationEntry.prevUntil("h2", "h4").first();
+    //if (heading.length > 1) heading = heading.first();
+    var divsToCheck = heading.nextUntil("h4", ".education-entry").find(".div-expander");
+    //console.log(heading, divsToCheck);
+    var expandAllBtn = heading.find(".expand-all-btn");
+
+    var visibileOrNot = [...divsToCheck].reduce((acc, x) => acc.concat($(x).hasClass("rotate-expander")), []);
+    //console.log(visibileOrNot);
+
+    if (visibileOrNot.every(x => x === true)) expandAllBtn.text("Collapse");
+    if (visibileOrNot.every(x => x === false)) expandAllBtn.text("Expand");
+
   }
 
-  // Reveal all hidden content (other-details) of the education section
+  // Reveal the hidden content (other-details) of 1 of 2 parts of the education section
   $(".expand-all-btn").on("click", function() {
-    $(".other-details").slideToggle(300);
-    $(".div-expander").toggleClass("rotate-expander");
+    var heading = $(this).parents("h4");
     var text = $(this).text();
-    $(".expand-all-btn").text(text == "Collapse" ? "Expand" : "Collapse");
+
+    // Expand only the divs between the current heading and the following
+    var divsToOpen = heading.nextUntil("h4", ".education-entry").find(".other-details");
+    var expandersToRotate = heading.nextUntil("h4", ".education-entry").find(".div-expander");
+    
+    // OLD way -- less customizable: divsToOpen.slideToggle(300);
+    
+    if (text.includes("Expand")) {
+      divsToOpen.slideDown();
+      expandersToRotate.addClass("rotate-expander");
+    }
+
+    if (text.includes("Collapse")) {
+      divsToOpen.slideUp();
+      expandersToRotate.removeClass("rotate-expander");
+    }
+    
+    // Change the text of the current div 
+    $(this).text(text == "Collapse" ? "Expand" : "Collapse");
   });
 
   // Reveal the sub-navbar when the navbar-submenu-expander is clicked

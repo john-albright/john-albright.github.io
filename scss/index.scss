@@ -500,6 +500,9 @@ p {
 .institution {
   color: lightsteelblue;
   font-style: italic;
+  //border: 1px solid black;
+  display: flex;
+  align-items: center;
 }
 
 .dates {

@@ -444,6 +444,8 @@ p {
 .institution {
   color: lightsteelblue;
   font-style: italic;
+  display: flex;
+  align-items: center;
 }
 
 .dates {
