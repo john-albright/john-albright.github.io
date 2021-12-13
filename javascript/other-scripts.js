@@ -31,21 +31,17 @@ $(document).ready(function() {
     $(".expand-all-projects").on("click", function() {
         
         var text = $(this).text();
-        //console.log(text);
+        var currentDivGrid = $(this).parents("h4").next();
         
         // Toggle the text in the button and rotate all div expanders
         if (text.includes(expandText)) {
             $(this).text(collapseText);
-
-            var currentDivGrid = $(this).parents("h4").next();
             currentDivGrid.find(".hidden-info").slideDown();
             currentDivGrid.find(".grid-expander").addClass("rotate-expander");
         }
         
         if (text.includes(collapseText)) {
             $(this).text(expandText);
-            
-            var currentDivGrid = $(this).parents("h4").next();
             currentDivGrid.find(".hidden-info").slideUp();
             currentDivGrid.find(".grid-expander").removeClass("rotate-expander");
         }
@@ -54,13 +50,24 @@ $(document).ready(function() {
 
     // Add click event for the div expanders on the experience page
     $(".expand-all-experience").on("click", function() {
-        var text = $(this).text();
+        var text = $(".expand-all-experience").text();
+        var currentDivGrid = $(this).siblings(".div-grid");
+        //console.log(currentDivGrid);
 
-        //console.log(text);
-
-        $(this).text(text.includes(expandText) ? collapseText : expandText);
-        $(".hidden-info").slideToggle(300);
         $(".grid-expander").addClass("rotate-expander");
+
+        // Toggle the text in the button and rotate all div expanders
+        if (text.includes(expandText)) {
+            $(".expand-all-experience").text(collapseText);
+            currentDivGrid.find(".hidden-info").slideDown();
+            currentDivGrid.find(".grid-expander").addClass("rotate-expander");
+        }
+        
+        if (text.includes(collapseText)) {
+            $(".expand-all-experience").text(expandText);
+            currentDivGrid.find(".hidden-info").slideUp();
+            currentDivGrid.find(".grid-expander").removeClass("rotate-expander");
+        }
     });
 
 });
