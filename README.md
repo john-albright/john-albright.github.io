@@ -3,3 +3,5 @@
 This is the source code for my portfolio website. To view the live website, visit my [GitHub user site](https://john-albright.github.io/).The index page can also be viewed on [CodePen](https://codepen.io/john-albright/full/mdwxzyw).
 
 The index page was created for the 5th project of FreeCodeCamp's first certificate [Responsive Web Design](https://www.freecodecamp.org/learn/responsive-web-design). Later, more pages were added to fulfill the requirements for [problem set 8](https://cs50.harvard.edu/x/2021/psets/8/homepage) of Harvard's [CS50 Introduction to Programming](https://online-learning.harvard.edu/course/cs50-introduction-computer-science?delta=0). The code was made from scratch using HTML, SCSS, JavaScript, jQuery, and Bootstrap. It took inspiration from a FreeCodeCamp model/project titled [FCC: Personal Portflio](https://codepen.io/freeCodeCamp/pen/zNBOYG). 
+
+All pdf files are encrypted. The password to access these files can be found in this [Google Drive document](https://docs.google.com/document/d/1PAowC21KX1EDtIKg902zYyOuGgj5lebb2yPtTLN5y8M/edit?usp=sharing).
