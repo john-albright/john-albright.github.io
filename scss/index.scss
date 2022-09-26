@@ -60,6 +60,12 @@ p {
   padding: 5px 40px;
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  * {
+    scroll-behavior: smooth;
+  }
+}
+
 /*============
   NAVBAR STYLES 
 ==============*/
