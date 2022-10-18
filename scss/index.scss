@@ -1,7 +1,3 @@
-// EXTERNAL FONTS
-@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Grey+Qo&family=Montserrat:wght@300&display=swap');
-
 // SASS Color Variables
 $purple-red-transparent: rgba(50, 0, 40, 0.967);
 $purple-blue-transparent: rgba(40, 0, 50, 0.5);
@@ -96,6 +92,7 @@ p {
   ul {
     padding: 0px 10px;
     margin: 0px;
+    opacity: 0;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     grid-column-gap: 10px;
@@ -224,7 +221,9 @@ p {
   h1 {
       line-height: 1.5em;
       text-align: center;
-      padding-top: 120px;
+      opacity: 0;
+      position: relative;
+      top: 360;
 
       @include sm-screen {
         font-size: 1.5em;

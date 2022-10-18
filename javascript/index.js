@@ -19,6 +19,10 @@ const linkEsp = "https://www.edx.org/professional-certificate/uc3mx-introduccion
 // jQuery functions to be applied once the document is loaded
 $(document).ready(function() {
   
+  // Animate text on the first page after it loads
+  $("#navbar ul").delay(2000).animate({opacity: 1}, 3000);
+  $('#welcome-section h1').delay(2000).animate({top: -50, opacity: 1}, 6000);
+
   /**
    * Add a custom function toggleHTML()
    * 
@@ -74,7 +78,7 @@ $(document).ready(function() {
     var divsToOpen = heading.nextUntil("h4", ".education-entry").find(".other-details");
     var expandersToRotate = heading.nextUntil("h4", ".education-entry").find(".div-expander");
     
-    // OLD way -- less customizable: divsToOpen.slideToggle(300);
+    // OLD way to expand divs -- less customizable: divsToOpen.slideToggle(300);
     
     if (text.includes("Expand")) {
       divsToOpen.slideDown();
@@ -131,7 +135,7 @@ $(document).ready(function() {
   $(window).on("resize", function() {
     changeProjectImageHeight();
     
-    /* Code to show ul in case it gets hidden
+    /* Code to show <ul> in case it gets hidden
     var width = $(window).width();
     
     if (width > 600 && !$("#navbar > ul").is(":visible")) {
